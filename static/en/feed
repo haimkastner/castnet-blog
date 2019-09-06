@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Coding and Development Thoughts Blog</title>
+        <link>https://blog.castnet.club/en</link>
+        <description>Coding and Development Thoughts Blog, The Content is on the responsibility of the mind reader</description>
+        <lastBuildDate>Thu, 22 Aug 2019 14:36:23 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <language>en</language>
+        <image>
+            <title>Coding and Development Thoughts Blog</title>
+            <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
+            <link>https://blog.castnet.club/en</link>
+        </image>
+        <copyright>All rights reserved 2019, Haim Kastner</copyright>
+        <category>software development</category>
+        <item>
+            <title><![CDATA[ dummy recursion in js and its solution with async await]]></title>
+            <link>https://blog.castnet.club/en/blog/dummy-recursion-in-js-and-its-solution-with-async-await</link>
+            <guid>https://blog.castnet.club/en/blog/dummy-recursion-in-js-and-its-solution-with-async-await</guid>
+            <description><![CDATA[ Invoke async calls, in sync, why and how.]]></description>
+        </item>
+    </channel>
+</rss>

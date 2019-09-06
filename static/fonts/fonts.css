@@ -1,0 +1,7 @@
+@font-face {
+	font-family: "VarelaRound";
+	font-style: normal;
+  	font-display: swap;
+	font-weight: 400;
+	src: URL('/fonts/VarelaRound-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>בלוג מחשבות על קידוד ופיתוח</title>
+        <link>https://blog.castnet.club/</link>
+        <description>בלוג מחשבות על קידוד ופיתוח, התוכן באחריות קורא המחשבות</description>
+        <lastBuildDate>Thu, 22 Aug 2019 14:36:23 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <language>he</language>
+        <image>
+            <title>בלוג מחשבות על קידוד ופיתוח</title>
+            <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
+            <link>https://blog.castnet.club/</link>
+        </image>
+        <copyright>All rights reserved 2019, Haim Kastner</copyright>
+        <category>software development</category>
+        <item>
+            <title><![CDATA[ רקורסיית דמה ב-JS  ופתרונה עם async+await]]></title>
+            <link>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</link>
+            <guid>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</guid>
+            <description><![CDATA[ ביצוע קריאות אסינכרוניות בצורה סינכרונית, למה ואיך.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ כדור הארץ, קואורדינטות במרחב ומה שביניהם]]></title>
+            <link>https://blog.castnet.club/blog/earth-coordinates-and-spatial-data</link>
+            <guid>https://blog.castnet.club/blog/earth-coordinates-and-spatial-data</guid>
+            <description><![CDATA[ אינפורמציה קלה, על קצה המזלג, על עולם קואורדינטות כדור-הארץ ותיאור מיקומים ויחס בין יקומים מנקודת מבט של מפתח למערכות GIS. ]]></description>
+        </item>
+    </channel>
+</rss>
