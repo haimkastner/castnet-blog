@@ -24,7 +24,7 @@
             <h6 class="elevate-cover__description">
               <a
                 target="blank"
-                :href="`https://github.com/haimkastner/kastnets-blog/tree/master/contents/${$i18n.locale}/blog/${name}.md`"
+                :href="`https://github.com/haimkastner/castnet-blog/tree/master/contents/${$i18n.locale}/blog/${name}.md`"
               >Edit on GitHub</a>
             </h6>
 
