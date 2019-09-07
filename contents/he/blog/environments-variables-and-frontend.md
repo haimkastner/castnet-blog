@@ -177,6 +177,16 @@ js
 את אותו התרגיל בשינויים מתבקשים ניתן לבצע לכל טכנולוגיית צד לקוח, 
 ובתנאי שיש תהליך בילד כלשהוא.
 
+### נ.ב.
+ניתן גם להשתמש במנגנון משתני הסביבה של
+`webpack`
+(גם Vue.js מאחורי הקלעים משתמשים בזה)
+גם ב-Angular
+אבל זה יותר מורכב ודורש שינוי של הקונפיגורציה של
+Angular ושל webpack. 
+
+[System environment variables in Angular](https://blog.usejournal.com/system-environment-variables-in-angular-1f4a922c7b4c)
+
 ---
 
 תודות ל[חוני גורליק](https://twitter.com/chonye91) על העזרה בעריכת המאמר.
