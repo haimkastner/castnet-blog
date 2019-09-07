@@ -64,7 +64,7 @@ module.exports = {
   ],
 
   build: {
-    extend (config) {
+    extend(config) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
       config.module.rules.splice(config.module.rules.indexOf(rule), 1)
 
@@ -101,7 +101,10 @@ module.exports = {
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
     '@nuxtjs/feed',
-    ['nuxt-i18n', I18N]
+    ['nuxt-i18n', I18N],
+    ['@nuxtjs/google-analytics', {
+      id: process.env.ANALYTICS_ID || 'off'
+    }]
   ],
   feed: [
     {
@@ -123,29 +126,29 @@ module.exports = {
             link: "https://twitter.com/hkastnet"
           }
         }
-      
+
         blogsHe.forEach(article => {
           const articalRawContent = fse.readFileSync(`./contents/he/blog/${article}.md`, "utf8");
           const articalHeaders = articalRawContent.split('---')[1].split(/\r?\n/);
-          
+
           let title = article;
           let description = article;
           for (const header of articalHeaders) {
-            if(header.indexOf('title') === 0){
+            if (header.indexOf('title') === 0) {
               title = header.split(':')[1];
             }
-            if(header.indexOf('description') === 0){
+            if (header.indexOf('description') === 0) {
               description = header.split(':')[1];
             }
           }
-          
+
           feed.addItem({
             title,
             link: `https://blog.castnet.club/blog/${article}`,
             description,
           })
         })
-      
+
         feed.addCategory('software development')
       },
       type: 'rss2', // Can be: rss2, atom1, json1
@@ -169,29 +172,29 @@ module.exports = {
             link: "https://twitter.com/hkastnet"
           }
         }
-      
+
         blogsEn.forEach(article => {
           const articalRawContent = fse.readFileSync(`./contents/en/blog/${article}.md`, "utf8");
           const articalHeaders = articalRawContent.split('---')[1].split(/\r?\n/);
-          
+
           let title = article;
           let description = article;
           for (const header of articalHeaders) {
-            if(header.indexOf('title') === 0){
+            if (header.indexOf('title') === 0) {
               title = header.split(':')[1];
             }
-            if(header.indexOf('description') === 0){
+            if (header.indexOf('description') === 0) {
               description = header.split(':')[1];
             }
           }
-          
+
           feed.addItem({
             title,
             link: `https://blog.castnet.club/en/blog/${article}`,
             description,
           })
         })
-      
+
         feed.addCategory('software development')
       },
       type: 'rss2', // Can be: rss2, atom1, json1

@@ -97,6 +97,8 @@
 
 ## 💫 Deploy
 
+Set `ANALYTICS_ID` environment variable to use google analytics.
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marinaaisa/nuxt-markdown-blog-starter)
 
 ## Credits
