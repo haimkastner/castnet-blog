@@ -4,7 +4,7 @@ title: משתני סביבה וצד-לקוח
 year: 8 בספטמבר 2019
 color: '#8e7964'
 id: 'environments-variables'
-description: משתני סביבה, סקירה, שימוש והקשר לטכנולוגיות צד לקוח.
+description: 'משתני סביבה: סקירה, שימוש, והקשר לטכנולוגיות צד לקוח.'
 ---
 
 # סקירה
@@ -50,7 +50,10 @@ description: משתני סביבה, סקירה, שימוש והקשר לטכנו
 משתנה סביבה, שניתן לערוך מחוץ לקוד שרץ,
 ולקרוא אותו בקוד בזמן ריצה.
 כך שבקוד קוראים את ערכו, 
-אבל להזין אותו ניתן להזין ברמת המכונה או התהליך. 
+אבל להזין אותו ניתן להזין ברמת המכונה או התהליך.
+(מדריך 
+[הזנת משתני מערכת](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html))
+
 אז אצלנו בשרת הפרחים, נקרא את ערכו של משתנה הסביבה
 `DB_URI`
 (או כל שם אחר שעולה בראש) 
@@ -183,7 +186,9 @@ js
 (גם Vue.js מאחורי הקלעים משתמשים בזה)
 גם ב-Angular
 אבל זה יותר מורכב ודורש שינוי של הקונפיגורציה של
-Angular ושל webpack. 
+Angular
+(או כל כלי דומה)
+ ושל webpack. 
 
 [System environment variables in Angular](https://blog.usejournal.com/system-environment-variables-in-angular-1f4a922c7b4c)
 
