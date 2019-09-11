@@ -122,8 +122,9 @@ description: אינפורמציה קלה על קצה המזלג על עולם ק
 <image-responsive class="center" imageURL="blog/earth-coordinates/dms.png"  alt="dms location"/>
 
 ועכשיו כבר די מובן וברור לאן מוביל אותנו הקישור הבא של גוגל מפות:
-`https://www.google.co.il/maps/place/32°48'37.4"N+35°00'47.0"E/`
-
+```bash
+https://www.google.co.il/maps/place/32°48'37.4"N+35°00'47.0"E/
+```
 המערכת, כמו שלא קשה להבין, היא קוטבית.
 
 #### יתרונות
