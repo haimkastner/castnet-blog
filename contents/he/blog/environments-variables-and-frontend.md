@@ -141,6 +141,7 @@ Vue.js
 
 כך ניתן להגדיר משתנה `production` ולשים בתוכו `false`,
 ובבילד של פרודקשן להחליף בקובץ שבו ערכו של `production` הוא `true`.
+[לקריאת הדוקומנטציה במלואה](https://angular.io/guide/build).
 
 שזה פתרון נחמד אבל לנו הוא לא מספיק. 
 כי עדיין איפשהו יהיה צריך להיות קובץ 
@@ -150,19 +151,48 @@ Vue.js
 ושינוי שלו הוא שינוי בקוד וכל מה שראינו.
 
 ### אז מה עושים?
-הפתרון שאני עשיתי (אולי יש טובים יותר) היה ליצור סקריפט
+הפתרון שאני עשיתי (ייתכן ויש טובים יותר) היה ליצור סקריפט
 js 
 שיוצר את הקובץ
 `environment.final.ts` ואת הערכים הוא מזין לפי משתני הסביבה. 
 וב-`package.json`
-תחת `prepare` הפעלתי את הסקריפט.
+תחת `prebuild`
+הגדרתי שהסקריפט ירוץ לפני כל קריאה לבילד.
 
-ההפעלה נראית כך:
+סקריפט לדוגמה:
+```javascript
+/** This script use to allow set API URL by system environment at build process time */
+const fse = require('fs-extra');
+
+const { API_URL } = process.env;
+const defaultApiUrl = 'http://127.0.0.1:3000';
+
+if (API_URL) {
+    console.log(`API URL set to be ${API_URL}`);
+} else {
+    console.warn(`There is no 'API_URL' environment var, using ${defaultApiUrl} as default...`);
+}
+
+fse.outputFileSync('./src/environments/environment.final.ts', `
+export const environment = {
+    production: true,
+    baseUrl: '${API_URL || defaultApiUrl}/API'
+};
+`);
+```
+וקובץ ה-`package.json`:
 ```json
 {
-...
-    "prepare" : "node ./path/env-generator.js"
-...
+  "name": "my-app-name",
+  "version": "0.0.0",
+  "scripts": {
+    "prebuild": "node ./create-final-environment.js",
+    "build" : "ng build --prod"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
 }
 ```
 
@@ -173,9 +203,9 @@ js
 שיניתי שבפרודקשן הוא יחליף את הקובץ
 `environment.ts` ב-`environment.final.ts`.
 
-וב-`.gitignore` הכנסתי את הקובץ `environment.final.ts` כך שהוא לעולם לא יכנס לקוד המקור.
+וב-`gitignore` הוספתי את הקובץ `environment.final.ts` כך שהוא לעולם לא יכנס לקוד המקור.
 
-וכך הצלחתי שממשתנה סביבה בזמן בילד הלקוח יקבל את הכתובת המתאימה בהתאם לסביבת הריצה 
+וכך ממשתנה סביבה בזמן בילד הלקוח יקבל את הכתובת המתאימה בהתאם לסביבת הריצה 
 ללא שינוי בקוד.
 
 את אותו התרגיל בשינויים מתבקשים ניתן לבצע לכל טכנולוגיית צד לקוח, 
