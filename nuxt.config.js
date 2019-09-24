@@ -14,7 +14,11 @@ const baseUrl = 'https://blog.castnet.club';
 module.exports = {
   env: {
     baseUrl,
-    productionUrl
+    productionUrl,
+    VSSUE_OWNER : process.env.VSSUE_OWNER,
+    VSSUE_REPO: process.env.VSSUE_REPO,
+    VSSUE_CLIENT_ID: process.env.VSSUE_CLIENT_ID,
+    VSSUE_CLIENT_SECRET: process.env.VSSUE_CLIENT_SECRET,
   },
   head: {
     title: 'Haim Kastner | Thoughts on coding and development',
