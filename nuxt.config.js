@@ -14,7 +14,11 @@ const baseUrl = 'https://blog.castnet.club';
 module.exports = {
   env: {
     baseUrl,
-    productionUrl
+    productionUrl,
+    VSSUE_OWNER : process.env.VSSUE_OWNER,
+    VSSUE_REPO: process.env.VSSUE_REPO,
+    VSSUE_CLIENT_ID: process.env.VSSUE_CLIENT_ID,
+    VSSUE_CLIENT_SECRET: process.env.VSSUE_CLIENT_SECRET,
   },
   head: {
     title: 'Haim Kastner | Thoughts on coding and development',
@@ -62,8 +66,11 @@ module.exports = {
     'normalize.css/normalize.css',
     '@/assets/css/main.scss'
   ],
-
+  plugins: [ { src: '~/plugins/vssue', mode: 'client' }, '~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
   build: {
+    transpile: [
+      '(@vssue|vssue)\/((?!\/node_modules\/).)*\.js$',
+    ],
     extend(config) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
       config.module.rules.splice(config.module.rules.indexOf(rule), 1)
@@ -96,7 +103,6 @@ module.exports = {
         });
     }
   },
-  plugins: ['~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',

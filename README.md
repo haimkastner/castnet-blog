@@ -101,5 +101,14 @@ Set `ANALYTICS_ID` environment variable to use google analytics.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marinaaisa/nuxt-markdown-blog-starter)
 
+## Comments system
+The comments system is using [vssue](https://vssue.js.org/) solution.
+
+Follow vssue [create a new OAuth app](https://vssue.js.org/guide/github.html#create-a-new-oauth-app) documentation and after that, set the following environment variables:
+* `VSSUE_OWNER`
+* `VSSUE_REPO`
+* `VSSUE_CLIENT_ID`
+* `VSSUE_CLIENT_SECRET`
+
 ## Credits
 Icon from [icons8](https://icons8.com/).
