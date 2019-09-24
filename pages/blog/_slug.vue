@@ -58,7 +58,7 @@
         />
       </no-ssr>
       <ClientOnly>
-        <Vssue :title="$i18n.locale + title" />
+        <Vssue :title="`${$i18n.locale}:${id}`" />
       </ClientOnly>
     </div>
     <Subscribe />
