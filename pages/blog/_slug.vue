@@ -57,6 +57,9 @@
           :extra-component="extraComponent"
         />
       </no-ssr>
+      <ClientOnly>
+        <Vssue title="Vssue comments" />
+      </ClientOnly>
     </div>
     <Subscribe />
   </div>

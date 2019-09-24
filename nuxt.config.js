@@ -62,8 +62,11 @@ module.exports = {
     'normalize.css/normalize.css',
     '@/assets/css/main.scss'
   ],
-
+  plugins: [ { src: '~/plugins/vssue', mode: 'client' }, '~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
   build: {
+    transpile: [
+      '(@vssue|vssue)\/((?!\/node_modules\/).)*\.js$',
+    ],
     extend(config) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
       config.module.rules.splice(config.module.rules.indexOf(rule), 1)
@@ -96,7 +99,6 @@ module.exports = {
         });
     }
   },
-  plugins: ['~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
