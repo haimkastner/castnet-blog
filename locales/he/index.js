@@ -1,4 +1,5 @@
 import footer from './footer'
+import comments from './comments'
 import indexPageHead from './index-page-head'
 
 export default {
@@ -8,5 +9,6 @@ export default {
   indexPageHead: indexPageHead,
   posts: 'פוסטים',
   home: 'בית',
-  footer: footer
+  footer,
+  comments,
 }
