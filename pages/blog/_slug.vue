@@ -58,7 +58,7 @@
         />
       </no-ssr>
       <h4>
-        <span v-html="`${$t('comments.message')} <a target='_blank' href='https://github.com/haimkastner/castnet-blog/issues?utf8=%E2%9C%93&q=is:open+label:Vssue+[Vssue]${$i18n.locale}:${id}'>${$t('comments.here')}</a> ${$t('comments.thanks')}`" />  
+        <span v-html="`${$t('comments.message')} <a target='_blank' href='https://github.com/castnetblog/blog-comments/issues?utf8=%E2%9C%93&q=is:open+label:Vssue+[Vssue]${$i18n.locale}:${id}'>${$t('comments.here')}</a> ${$t('comments.thanks')}`" />  
       </h4>
       <ClientOnly>
         <Vssue :title="`${$i18n.locale}:${id}`" />
