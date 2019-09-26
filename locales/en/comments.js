@@ -1,5 +1,5 @@
 export default {
-  message: `Commenting requires that you grant writing access from your GitHub account. 
+  message: `Commenting requires that you grant writing premission from your GitHub account. 
         
   I promise to use it only to put your comment in the blog's GitHub repository issue system. 
   
