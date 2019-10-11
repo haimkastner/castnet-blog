@@ -27,12 +27,12 @@ I must say, this is the tools I used, you can buy from other sellers or similar 
 
 ### Hardware equipment
 
-1. [IR device (transmitter and receiver)](https://www.aliexpress.com/item/33004692351.html?spm=a2g0s.9042311.0.0.2e4d4c4dKvphql)
-1. [Soldering iron and tin](https://www.aliexpress.com/item/924260113.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [Board (not must)](https://www.aliexpress.com/item/32701019904.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [Male wires](https://www.aliexpress.com/item/32701019904.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [Female Wires](https://www.aliexpress.com/item/32636873838.html?spm=a2g0s.9042311.0.0.27424c4dLBkmSl)
-1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html?spm=a2g0s.9042311.0.0.27424c4dLBkmSl)
+1. [IR device (transmitter and receiver)](https://www.aliexpress.com/item/33004692351.html)
+1. [Soldering iron and tin](https://www.aliexpress.com/item/924260113.html)
+1. [Board (not must)](https://www.aliexpress.com/item/32701019904.html)
+1. [Male wires](https://www.aliexpress.com/item/32701019904.html
+1. [Female Wires](https://www.aliexpress.com/item/32636873838.html)
+1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html)
 
 
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/hardware.jpg"  alt="Hardware"/>
@@ -110,7 +110,7 @@ We need to connect the device (while not connected to power!!!) to the PC via th
 
 The connection diagram is:
 
-* port `v3v` of the device to the `v3v` of the converter.
+* port `3v3` of the device to the `3v3` of the converter.
 * port `TXD` of the device to the `RXD` of the converter.
 * port `RXD` of the device to the `TXD` of the converter.
 * port `GND` of the device to the `GND` of the converter.
