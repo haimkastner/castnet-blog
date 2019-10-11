@@ -123,12 +123,12 @@ Tasmota מציעה ממשק בכל הפרוטוקולים הסטנדרטיים �
 
 ### ציוד חומרה
 
-1. [המכשיר עצמו, משדר ומקלט IR](https://www.aliexpress.com/item/33004692351.html?spm=a2g0s.9042311.0.0.2e4d4c4dKvphql)
-1. [מלחם ובדיל](https://www.aliexpress.com/item/924260113.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [לוח (לנוחות, לא חובה)](https://www.aliexpress.com/item/32701019904.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [חוטי חשמל זכר](https://www.aliexpress.com/item/32701019904.html?spm=a2g0s.9042311.0.0.27424c4doJgn8c)
-1. [חוטי חשמל נקבה](https://www.aliexpress.com/item/32636873838.html?spm=a2g0s.9042311.0.0.27424c4dLBkmSl)
-1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html?spm=a2g0s.9042311.0.0.27424c4dLBkmSl)
+1. [המכשיר עצמו, משדר ומקלט IR](https://www.aliexpress.com/item/33004692351.html)
+1. [מלחם ובדיל](https://www.aliexpress.com/item/924260113.html)
+1. [לוח (לנוחות, לא חובה)](https://www.aliexpress.com/item/32701019904.html)
+1. [חוטי חשמל זכר](https://www.aliexpress.com/item/32701019904.html)
+1. [חוטי חשמל נקבה](https://www.aliexpress.com/item/32636873838.html)
+1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html)
 
 
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/hardware.jpg"  alt="Hardware"/>
@@ -209,7 +209,7 @@ Tasmota מציעה ממשק בכל הפרוטוקולים הסטנדרטיים �
 
 החיבור הוא כדלהלן:
 
-* יציאת `v3v` של המכשיר ליציאת `v3v` של הממיר
+* יציאת `3v3` של המכשיר ליציאת `3v3` של הממיר
 * יציאת `TXD` של המכשיר ליציאת `RXD` של הממיר
 * יציאת `RXD` של המכשיר ליציאת `TXD` של הממיר
 * יציאת `GND` של המכשיר ליציאת `GND` של הממיר
