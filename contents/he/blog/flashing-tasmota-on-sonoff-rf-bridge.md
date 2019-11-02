@@ -1,7 +1,7 @@
 ---
 name: 'flashing-tasmota-on-sonoff-rf-bridge'
 title: צריבת Tasmota  על Sonoff RF Bridge
-year: 10 באוקטובר 2019
+year: 1 בנובמבר 2019
 color: '#8e7964'
 trans: 'flashing-tasmota-on-sonoff-rf-bridge'
 id: 'flashing-sonoff-rf'
@@ -173,7 +173,7 @@ description: מדריך צריבת קושחת Tasmota על משדר\מקלט RF 
 
 נמתין כמה שניות ואמורים לראות רשת חדשה במחשב או בטלפון שנקראת `sonoff-xxxx`
 
-<image-responsive class="center" imageURL="blog/flashing-tuya-ir/networks.jpg"  alt="networks"/>
+<image-responsive class="center" imageURL="blog/flashing-sonoff-rf/networks.jpg"  alt="networks"/>
 
 נתחבר לרשת הזו
 
@@ -184,7 +184,7 @@ description: מדריך צריבת קושחת Tasmota על משדר\מקלט RF 
 
 ונלחץ על 'Save'
 
-<image-responsive class="center" imageURL="blog/flashing-tuya-ir/ssid-config.jpg"  alt="ssid config"/>
+<image-responsive class="center" imageURL="blog/flashing-sonoff-rf/ssid-config.jpg"  alt="ssid config"/>
 
 המכשיר אמור לעשות אתחול עצמי ולהתחבר לרשת.
 
@@ -193,7 +193,7 @@ description: מדריך צריבת קושחת Tasmota על משדר\מקלט RF 
 כל ראוטר עם הממשק (המשונה) שלו אבל אמור להיות בו איפשהו הכתובות של המכשירים.
 
 בראוטר שלי (ASUS RT-xxxxxx) זה נראה כך:
-<image-responsive class="center" imageURL="blog/flashing-tuya-ir/dhcp-ips.jpg"  alt="DHCP IPs"/>
+<image-responsive class="center" imageURL="blog/flashing-sonoff-rf/dhcp-ips.jpg"  alt="DHCP IPs"/>
 
 אחרי שמצאנו מה הכתובת של המכשיר (במקרה שלי `192.168.1.36`)
 נזין את הכתובת בדפדפן.
