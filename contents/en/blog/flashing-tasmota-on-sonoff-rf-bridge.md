@@ -1,6 +1,6 @@
 ---
 name: 'flashing-tasmota-on-sonoff-rf-bridge'
-title: Flashing Tasmota on Tuya IR bridge
+title: Flashing Tasmota on Sonoff RF bridge
 year: 1 November 2019
 color: '#8e7964'
 trans: 'flashing-tasmota-on-sonoff-rf-bridge'
