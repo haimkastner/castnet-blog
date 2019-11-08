@@ -2,11 +2,21 @@
   import InlineCode from './InlineCode.vue'
   import hljs from 'highlight.js/lib/highlight'
   import javascript from 'highlight.js/lib/languages/javascript'
+  import json from 'highlight.js/lib/languages/json'
+  import cpp from 'highlight.js/lib/languages/cpp'
   import css from 'highlight.js/lib/languages/css'
   import xml from 'highlight.js/lib/languages/xml'
+  import cmake from 'highlight.js/lib/languages/cmake'
+  import makefile from 'highlight.js/lib/languages/makefile'
+  import bash from 'highlight.js/lib/languages/bash'
   hljs.registerLanguage('javascript', javascript)
+  hljs.registerLanguage('json', json)
   hljs.registerLanguage('css', css)
   hljs.registerLanguage('xml', xml)
+  hljs.registerLanguage('makefile', makefile)
+  hljs.registerLanguage('cmake', cmake)
+  hljs.registerLanguage('cpp', cpp)
+  hljs.registerLanguage('bash', bash)
   import 'highlight.js/styles/a11y-light.css'
 
   export default {
