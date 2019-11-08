@@ -1,4 +1,5 @@
 export default [
+  'mulit-platform-cpp',
   'flashing-tasmota-on-sonoff-rf-bridge',
   'environments-variables-and-frontend',
   'flashing-tasmota-on-tuya-ir-bridge',
