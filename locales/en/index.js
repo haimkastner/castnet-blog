@@ -1,5 +1,4 @@
 import footer from './footer'
-import comments from './comments'
 import indexPageHead from './index-page-head'
 
 export default {
@@ -10,5 +9,4 @@ export default {
   posts: 'Posts',
   home: 'Home',
   footer,
-  comments,
 }
