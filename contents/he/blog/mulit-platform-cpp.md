@@ -3,7 +3,7 @@ name: 'mulit-platform-cpp'
 title: פרוייקט ++C/C חוצה פלטפורמות
 year: 8 בנובמבר 2019
 color: '#8e7964'
-trans: 'mulit-platform-cpp'
+trans: 'soon'
 id: 'mulit-platform-cpp'
 description: הבנת תהליך בניית פרוייקט ++C/C משלב כתיבת הקוד ועד ההרצה והדיבאג בבסיס קוד אחד חוצה פלטפורמות
 ---
