@@ -57,14 +57,30 @@
           :extra-component="extraComponent"
         />
       </no-ssr>
-      <h4>
-        <span v-html="`${$t('comments.message')} <a target='_blank' href='https://github.com/castnetblog/blog-comments/issues?utf8=%E2%9C%93&q=is:open+label:Vssue+[Vssue]${$i18n.locale}:${id}'>${$t('comments.here')}</a> ${$t('comments.thanks')}`" />  
-      </h4>
       <ClientOnly>
-        <Vssue :title="`${$i18n.locale}:${id}`" />
+        <div id="disqus_thread"></div>
+        <script>
+          (function() {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+            s = d.createElement("script");
+            s.src = "https://castnet-blog.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the
+          <a
+            href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a>
+        </noscript>
       </ClientOnly>
     </div>
     <Subscribe />
+      <ClientOnly>
+        <script id="dsq-count-scr" src="//castnet-blog.disqus.com/count.js" async></script>
+      </ClientOnly>
   </div>
 </template>
 
