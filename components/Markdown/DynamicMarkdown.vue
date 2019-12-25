@@ -9,6 +9,7 @@
   import cmake from 'highlight.js/lib/languages/cmake'
   import makefile from 'highlight.js/lib/languages/makefile'
   import bash from 'highlight.js/lib/languages/bash'
+  import cs from 'highlight.js/lib/languages/cs'
   hljs.registerLanguage('javascript', javascript)
   hljs.registerLanguage('json', json)
   hljs.registerLanguage('css', css)
@@ -17,6 +18,7 @@
   hljs.registerLanguage('cmake', cmake)
   hljs.registerLanguage('cpp', cpp)
   hljs.registerLanguage('bash', bash)
+  hljs.registerLanguage('cs', cs)
   import 'highlight.js/styles/a11y-light.css'
 
   export default {
