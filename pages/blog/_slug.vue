@@ -64,10 +64,14 @@
             // DON'T EDIT BELOW THIS LINE
             var d = document,
             s = d.createElement("script");
-            s.src = "https://castnet-blog.disqus.com/embed.js";
+
+            s.src = d.URL.indexOf('https://blog.castnet.club/') === -1 
+             ? 'https://castnet-blog.disqus.com/embed.js'
+             : 'https://blog-castnet.disqus.com/embed.js';
             s.setAttribute("data-timestamp", +new Date());
             (d.head || d.body).appendChild(s);
           })();
+          
         </script>
         <noscript>
           Please enable JavaScript to view the
@@ -79,7 +83,7 @@
     </div>
     <Subscribe />
       <ClientOnly>
-        <script id="dsq-count-scr" src="//castnet-blog.disqus.com/count.js" async></script>
+        <script id="dsq-count-scr" src="//blog-castnet.disqus.com/count.js" async></script>
       </ClientOnly>
   </div>
 </template>
