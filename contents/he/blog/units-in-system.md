@@ -25,7 +25,7 @@ Mars Climate Orbiter.
 
 כן, אבל.
 
-אבל זה לא פתרון שמבטיח כלום. עדיין ייתכן והתכניתן הנמהר לא ישים לב, 
+זהו פתרון שלא מבטיח כלום. עדיין ייתכן והתכניתן הנמהר לא ישים לב, 
 יתבלבל או לא יבין את ההבדל בין המידות השונות 
 (מי יודע את ההבדל בין מייל ימי למייל יבשתי?)
 
@@ -35,7 +35,7 @@ Mars Climate Orbiter.
 
 במאמר זה אנסה להדגים את הבעייתיות שבצורת עבודה זו ולהציג פתרון שסוגר את הפינה בצורה טובה.
 
-אז אמל"ק קטן לבעיות בכתיבת קוד עם יחידות מידה:
+ראשית אמל"ק קטן לבעיות בכתיבת קוד עם יחידות מידה:
 - קשה לנתח מהי יחידת המידה אם לא כתבו מפורשות בשם המשתנה או בתיעוד את יחידת המידה
 - שמות משתנים טרחניים
 - המרות מיותרות לכל רוחב המערכת
@@ -77,7 +77,7 @@ Mars Climate Orbiter.
 <br>
 <br>
 
-ניתן לראות שזה מרגיש "לא טוב" שחייבים דווקא יארדים.
+בדוגמה זו ניתן לראות שזה מרגיש "לא טוב" שחייבים דווקא יארדים בשעה שהמערכת עצמה מטרית.
 
 <iframe height="400px" width="100%" src="https://repl.it/@HaimKastner/units-problem5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -86,16 +86,16 @@ Mars Climate Orbiter.
 <br>
 <br>
 
-## אז מה באמת הפתרון?
+## הפתרון
 
 תגידו שלום לספרייה 
 [UnitsNET](https://github.com/angularsen/UnitsNet).
 
-מה שהספריה המופלאה הזו עושה זה לתת מבנה נתונים המייצג את התכונה הנדרשת, 
+מה שהספרייה המופלאה הזו עושה זה לתת מבנה נתונים המייצג את התכונה הנדרשת, 
 נגיד `Length` עבור אורך. 
 למבנה הנתונים יהיו כתכונות את כל יחידות המידה הקיימות הרלוונטיות 
-(מטרים/יארדים וכו' וכו'). 
-כך בכל רחבי המערכת יסתובב לו מבנה הנתונים `Length`, 
+(מטרים, יארדים וכו' וכו'). 
+כך שבכל רחבי המערכת יסתובב לו מבנה הנתונים `Length`, 
 ולכשנצטרך יחידה ספציפית (נניח לקבל מידע מ-API שדורש מטרים) פשוט יקחו את המטרים ממבנה הנתונים של ה-`Length`.
 
 דוגמה? יאללה דוגמה בקוד.
@@ -131,7 +131,8 @@ JS/TS.
 לרווחת משתמשי JS/TS.
 
 
-והופ, הנה איך נפתרים כל הבעיות שהוצגו בדוגמאות מלעיל ב-TypeScript:
+והופ, הנה איך נפתרים כל הבעיות שהוצגו בדוגמאות מלעיל 
+(ב-TypeScript)
 
 
 <iframe height="400px" width="100%" src="https://repl.it/@HaimKastner/unitsnet-solution?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
