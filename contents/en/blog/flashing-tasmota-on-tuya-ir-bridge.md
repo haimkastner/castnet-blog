@@ -30,7 +30,7 @@ I must say, this is the tools I used, you can buy from other sellers or similar 
 1. [IR device (transmitter and receiver)](https://www.aliexpress.com/item/33004692351.html)
 1. [Soldering iron and tin](https://www.aliexpress.com/item/924260113.html)
 1. [Board (not must)](https://www.aliexpress.com/item/32701019904.html)
-1. [Male wires](https://www.aliexpress.com/item/32701019904.html
+1. [Male wires](https://www.aliexpress.com/item/32701019904.html)
 1. [Female Wires](https://www.aliexpress.com/item/32636873838.html)
 1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html)
 
