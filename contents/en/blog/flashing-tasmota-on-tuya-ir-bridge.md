@@ -12,6 +12,8 @@ description: Flashing Tasmota firmware on Tuya IR Trasmitter/Recevier manual
 
 ### Or as an alternative title: The best and cheapest universal remote ever. 
 
+> Updated on 27/6/2020
+
 ## The device pictures
 
 
@@ -43,7 +45,7 @@ All the equipment cost about 10$ and the device about 11$.
 
 1. PC with Windows 10 OS.
 1. download `esptool` flashing tool from [here](/assets/esptool.exe) or directly from the official [repo](https://github.com/espressif/esptool) at GitHub.
-1. Tasmota firmware from [here](/assets/tasmota.bin) (version 6.5.0-release-sonoff) or directly from the official [repo](https://github.com/arendst/Sonoff-Tasmota/releases) at GitHub.
+1. Tasmota IR firmware from [here](/assets/tasmota-ir.bin) (version Tasmota v8.3.1 Fred) or directly from the official [repo](https://github.com/arendst/Tasmota/releases) at GitHub.
 
 ## Flashing the firmware
 
@@ -52,7 +54,7 @@ All the equipment cost about 10$ and the device about 11$.
 ## Software settings
 
 Create a folder and copy to it the downloaded files
-`tasmota.bin` and `e sptool.exe`.
+`tasmota-ir.bin` and `e sptool.exe`.
 
 Let assume the folder is `C:\flasing`
 
@@ -76,7 +78,7 @@ Open the command line in the directory `C:\flasing`.
 On the command line write the following command:
 
 ```bash
-  esptool.exe -vv -cb 115200 -cp COM6 -ca 0x00000 -bz 1M -bm dout -cf tasmota.bin
+  esptool.exe -vv -cb 115200 -cp COM6 -ca 0x00000 -bz 1M -bm dout -cf tasmota-ir.bin
 ```
 
 Note that the `COM6` should be replaced by your device port from earlier.
