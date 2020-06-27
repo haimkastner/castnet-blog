@@ -12,6 +12,8 @@ description: Flashing Tasmota firmware on Tuya IR Trasmitter/Recevier manual
 
 ### Or as an alternative title: The best and cheapest universal remote ever. 
 
+> Updated on 27/6/2020
+
 ## The device pictures
 
 
@@ -30,7 +32,7 @@ I must say, this is the tools I used, you can buy from other sellers or similar 
 1. [IR device (transmitter and receiver)](https://www.aliexpress.com/item/33004692351.html)
 1. [Soldering iron and tin](https://www.aliexpress.com/item/924260113.html)
 1. [Board (not must)](https://www.aliexpress.com/item/32701019904.html)
-1. [Male wires](https://www.aliexpress.com/item/32701019904.html
+1. [Male wires](https://www.aliexpress.com/item/32701019904.html)
 1. [Female Wires](https://www.aliexpress.com/item/32636873838.html)
 1. [USB to TTL serial](https://www.aliexpress.com/item/32969146794.html)
 
@@ -43,7 +45,7 @@ All the equipment cost about 10$ and the device about 11$.
 
 1. PC with Windows 10 OS.
 1. download `esptool` flashing tool from [here](/assets/esptool.exe) or directly from the official [repo](https://github.com/espressif/esptool) at GitHub.
-1. Tasmota firmware from [here](/assets/tasmota.bin) (version 6.5.0-release-sonoff) or directly from the official [repo](https://github.com/arendst/Sonoff-Tasmota/releases) at GitHub.
+1. Tasmota IR firmware from [here](/assets/tasmota-ir.bin) (version Tasmota v8.3.1 Fred) or directly from the official [repo](https://github.com/arendst/Tasmota/releases) at GitHub.
 
 ## Flashing the firmware
 
@@ -52,7 +54,7 @@ All the equipment cost about 10$ and the device about 11$.
 ## Software settings
 
 Create a folder and copy to it the downloaded files
-`tasmota.bin` and `e sptool.exe`.
+`tasmota-ir.bin` and `e sptool.exe`.
 
 Let assume the folder is `C:\flasing`
 
@@ -76,7 +78,7 @@ Open the command line in the directory `C:\flasing`.
 On the command line write the following command:
 
 ```bash
-  esptool.exe -vv -cb 115200 -cp COM6 -ca 0x00000 -bz 1M -bm dout -cf tasmota.bin
+  esptool.exe -vv -cb 115200 -cp COM6 -ca 0x00000 -bz 1M -bm dout -cf tasmota-ir.bin
 ```
 
 Note that the `COM6` should be replaced by your device port from earlier.

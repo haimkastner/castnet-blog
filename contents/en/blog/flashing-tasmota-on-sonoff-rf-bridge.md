@@ -10,6 +10,8 @@ description: Flashing Tasmota firmware on Sonoff RF Trasmitter/Recevier manual
 
 # Flashing manual for Sonoff RF bridge 433MHz.
 
+> Updated on 27/6/2020
+
 ## Pictures of the device
 
 <image-responsive class="center" imageURL="blog/flashing-sonoff-rf/device-1.jpg"  alt="Device"/>
@@ -33,7 +35,7 @@ These are the tools I used, you can buy from other sellers or similar tools.
 
 1. PC with Windows 10 OS.
 1. download `esptool` flashing tool from [here](/assets/esptool.exe) or directly from the official [repo](https://github.com/espressif/esptool) at GitHub.
-1. Tasmota firmware from [here](/assets/tasmota.bin) (version 6.5.0-release-sonoff) or directly from the official [repo](https://github.com/arendst/Sonoff-Tasmota/releases) at GitHub.
+1. Tasmota firmware from [here](/assets/tasmota.bin) (version Tasmota v8.3.1 Fred) or directly from the official [repo](https://github.com/arendst/Tasmota/releases) at GitHub.
 
 ## Flashing the firmware
 
@@ -48,7 +50,7 @@ Let's assume the folder is `C:\flasing`
 
 Connect the `USB to Serial` converter to the PC.
 Wait until the drivers are automatically installed by Windows.
-(if it doesn't work autotmatically, go [here](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41) or [here](https://answers.microsoft.com/en-us/windows/forum/windows_10-hardware/prolific-usb-to-serial-comm-port-windows-10/0a4f8e48-7135-4434-9d10-349c9ce87fcf?auth=1))
+(if it doesn't work automatically, go [here](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41) or [here](https://answers.microsoft.com/en-us/windows/forum/windows_10-hardware/prolific-usb-to-serial-comm-port-windows-10/0a4f8e48-7135-4434-9d10-349c9ce87fcf?auth=1))
 
 In Windows, search for `device manager`
 and select the first result, or press `Windows Key` + `R` and insert `devmgmt.msc`.
