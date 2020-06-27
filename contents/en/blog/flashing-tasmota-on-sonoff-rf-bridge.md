@@ -160,7 +160,7 @@ Make sure that all wires are removed, and the cover is in its place, then connec
 Make sure that you have disconnected all the wires and replaced the switch on the board to ON.
 Connect the device to a power supply.
 
-Wait a few seconds and then a new network named `sonoff-xxxx` should appear in the WiFi list on a PC or smartphone.
+Wait a few seconds and then a new network named `sonoff-xxxx` (`tasmota-xxxx` in the new versions) should appear in the WiFi list on a PC or smartphone.
 
 <image-responsive class="center" imageURL="blog/flashing-sonoff-rf/networks.jpg"  alt="networks"/>
 
@@ -206,6 +206,6 @@ And that is it. you've finished.
 
 Now you can use the device.
 
-I recommend to see the Tasmota IR documentation [here](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#sonoff-rf-bridge).
+I recommend to see the Tasmota RF documentation [here](https://tasmota.github.io/docs/Commands/#rf-bridge).
 
 ### And again, Have fun!
