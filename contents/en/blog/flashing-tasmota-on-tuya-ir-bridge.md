@@ -147,7 +147,7 @@ The flashing is finished!
 
 Make sure that all wires removed, and the cover is in his place, then connect device to the power.
 
-Wait a few seconds and then should be a new network named `sonoff-xxxx` in the WiFi list on PC or smartphone.
+Wait a few seconds and then should be a new network named `sonoff-xxxx` (`tasmota-xxxx` in the new versions) in the WiFi list on PC or smartphone.
 
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/networks.jpg"  alt="networks"/>
 
@@ -194,7 +194,7 @@ And that is it. you finished.
 
 Now you can use the device.
 
-I recomand to see the Tasmota IR documentation [here](https://github.com/arendst/Sonoff-Tasmota/wiki/Commands#irremote) and [here](https://github.com/arendst/Sonoff-Tasmota/issues/2116#issuecomment-440716483).
+I recomand to see the Tasmota IR documentation [here](https://tasmota.github.io/docs/Commands/#ir-remote).
 
 ### Have fun!
 
