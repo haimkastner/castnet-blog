@@ -12,7 +12,7 @@ description: Flashing Tasmota firmware on Tuya IR Trasmitter/Recevier manual
 
 ### Or as an alternative title: The best and cheapest universal remote ever. 
 
-> Updated on 27/6/2020
+> Updated on 22/8/2020
 
 ## The device pictures
 
@@ -194,7 +194,39 @@ And that is it. you finished.
 
 Now you can use the device.
 
-I recomand to see the Tasmota IR documentation [here](https://tasmota.github.io/docs/Commands/#ir-remote).
+## Sending/Receiving IR Commands
+
+When you send an IR signal you can see the IrReceived message on the console.
+The message should look like:
+```JSON
+{"IrReceived":{"Protocol":"GREE","Bits":64,"Data":"0x0x190C6050000000F0","Repeat":0,"IRHVAC":{"Vendor":"GREE"............},"RawData":[9084,4338,740,1622,.........],"RawDataInfo":[139,139,0]}}
+```
+
+Note that if the raw data is too long the only way to get the full list is by using the MQTT interface. 
+
+You can sent it using the console/MQTT, by using the IRsend or IRhvac commands.
+Put the following command on the console input and press enter:
+
+By IRsend
+
+```IRsend {"Protocol":"GREE","Bits":64,"Data":"0x0x190C6050000000F0","Repeat":0}```
+
+By IRhvac
+
+```IRhvac {"Vendor":"GREE", ..... (put here all the properties from the IrReceived.IRHVAC object ) .....}```
+
+By RawData
+
+```IRsend 0 9084,4338,740,1 ...... (put here all number from the IrReceived.RawData array ) ........```
+
+For more information you see the tasmota documentation [sending IR commands sending raw IR](https://tasmota.github.io/docs/Commands/#ir-remote) and to send this commands [using MQTT](https://tasmota.github.io/docs/Commands/)
+
+
+If you need to convert from the IrRaw format to the Broadlink format you can use my npm package implementation [broadlink-ir-converter](https://www.npmjs.com/package/broadlink-ir-converter)
+
+>If you want to receive the IrRaw payload in the console/mqtt, go to the web-ui console and press `SetOption58 1`.
+
+I recommend to see the full Tasmota IR documentation [here](https://tasmota.github.io/docs/Commands/#ir-remote).
 
 ### Have fun!
 
