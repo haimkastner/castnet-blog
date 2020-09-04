@@ -26,7 +26,7 @@
     "frontmatter-markdown-loader": "^1.8.0",
     "fs-extra": "^8.1.0",
     "highlight.js": "^9.17.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.3.1",
     "sharp": "^0.22.1"
