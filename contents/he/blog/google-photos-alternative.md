@@ -198,7 +198,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 <image-responsive class="center" imageURL="blog/google-photos-alternative/11.png" />
 
 
-מפה נוכל וחשוב גם לשנות את הסיסמה הדיפולטית למשהו אישי וסודי יותר...
+מפה נוכל וחשוב גם לשנות את הסיסמה הדיפולטית למשהו אישי וסודי יותר 🤫
 
 ### גיבוי וסנכרון
 
@@ -222,7 +222,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 כשאתם מגבים חשוב מאוד להעתיק גם את התיקייה של הקבצים (במקרה שלי `D:/Picture` ) וגם את התיקיה של האינדקסים וההגדרות (במקרה שלי `D:/.photoprism`).
 
 
-אם כבר מדברים על גיבוי, היות ואנחנו מגבים ידנית בעצמנו, אני חושב שכדאי להשתמש בסקריפט פשוט שיעתיק עבורנו רק את העדכונים ולא סתם ידרוס שוב ושוב את כל הקבצים, ככה זה יחסוך גם זמן וגם קריאות לדיסק.
+אם כבר מדברים על גיבוי, היות ואנחנו מגבים ידנית בעצמנו, כדאי להשתמש בסקריפט פשוט שיעתיק עבורנו רק את העדכונים ולא סתם לדרוס שוב ושוב את כל הקבצים, וכך נחסוך גם זמן וגם קריאות לדיסק.
 
 נשמע מורכב? אז ממש לא.
 
@@ -231,18 +231,18 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 `my_copy_script.bat`
 
-ובתוכו נכניס את השורות הבאות:
+ובתוכו נכניס את הטקסט הבא:
 
 ```
 
-:: this is to miror the dest to be like src (remove files in dest if needed)
+:: this is to mirror the dest to be like src (remove files in dest if needed)
 Robocopy D:\Pictures F:\Pictures /MIR /FFT /Z /XA:H /W:5
 Robocopy D:\.photoprism F:\.photoprism /MIR /FFT /Z /XA:H /W:5
 pause
 
 ```
 
-הנתיבים פה הם כמובן מה שנכון עבורי בדוגמה, נשנה אותם למה שרלוונטי, נשמור את השינויים, וכל מה שנשאר זה ללחוץ פעמים על הקובץ ולהמתין שההעתקה תסתיים.
+הנתיבים פה הם כמובן מה שנכון עבורי בדוגמה, נשנה אותם למה שרלוונטי, נשמור את השינויים, וכל מה שנשאר זה ללחוץ פעמיים על הקובץ ולהמתין שההעתקה תסתיים.
 
 
 כדאי לדעת שהמפתחים של הפרויקט גם עובדים על סנכרון מול Google Drive למי שזה חשוב ועדיין לא רוצה להתנתק לגמרי מהאח הגדול...
@@ -269,7 +269,7 @@ pause
 
  וגם כדאי לנסות את האפליקציה של   [photoprism-mobile](https://github.com/photoprism/photoprism-mobile) PhotoPrism שאמנם כרגע בשלבי בנייה, אבל יש בה פיצ'ר ניסיוני של סנכרון אוטומטי ממש כמו בגוגל תמונות, לי זה עבד חלק. שווה לנסות.
 
- ואם כבר הלכתם על כתובת סטטית כדאי להתקין Pi Hole (תודות לרן בר זיק על המאמר הנפלא [התקנה ושימוש ב-PI HOLE כשרת DNS](https://internet-israel.com/%d7%9e%d7%93%d7%a8%d7%99%d7%9b%d7%99%d7%9d/raspberrypi/%d7%94%d7%aa%d7%a7%d7%a0%d7%94-%d7%95%d7%a9%d7%99%d7%9e%d7%95%d7%a9-%d7%91-pi-hole-%d7%9b%d7%a9%d7%a8%d7%aa-dns/)) ולהוסיף רשומות DNS מקומית למחשב.
+ ואם כבר הלכתם על כתובת סטטית כדאי להתקין Pi Hole (תודות לרן בר זיק על המאמר הנפלא [התקנה ושימוש ב-PI HOLE כשרת DNS](https://internet-israel.com/%d7%9e%d7%93%d7%a8%d7%99%d7%9b%d7%99%d7%9d/raspberrypi/%d7%94%d7%aa%d7%a7%d7%a0%d7%94-%d7%95%d7%a9%d7%99%d7%9e%d7%95%d7%a9-%d7%91-pi-hole-%d7%9b%d7%a9%d7%a8%d7%aa-dns/)) ולהוסיף רשומת DNS מקומית למחשב.
  
 <br>
 <br>
