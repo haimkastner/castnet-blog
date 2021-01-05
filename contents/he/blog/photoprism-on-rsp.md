@@ -20,8 +20,8 @@ description:  סקירה והוראות התקנה לאלטרנטיבה לגוג
 * Raspberry PI 3/4 (את המדריך בדקתי על Raspberry Pi 4 B 8GB), אישית קניתי קיט
  [בפייטל](https://piitel.co.il/shop/starter-pi48gb/)
  , נתנו אחלה שירות, אבל כמובן אפשר לקנות גם באליאקספרס אמזון או בכל מקום שתרצו
-* דיסק קשיח\כונן אכסון חיצוני עם יציאת USB, אפשר גם לנצל דיסק קשיח ישן שבטח שוכב איפשהו בבית ולקנות מתאם SATA USB 
-[כזה למשל](https://www.aliexpress.com/item/4001245354293.html))
+* דיסק קשיח\כונן אחסון חיצוני עם יציאת USB, אפשר גם לנצל דיסק קשיח ישן שבטח שוכב איפשהו בבית ולקנות מתאם SATA USB 
+[כזה למשל](https://www.aliexpress.com/item/4001245354293.html)
 
 
 ו..זהו!
@@ -44,14 +44,14 @@ description:  סקירה והוראות התקנה לאלטרנטיבה לגוג
 דבר ראשון נוריד את האימייג' המתאים של raspbian 
 [מכאן](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-desktop)
 
-אחרי שההורדה הסתיימה נחלץ את הקובת ה-IMG ו"נצרוב" אותה על הכרטיס.
+אחרי שההורדה הסתיימה נחלץ את קובץ ה-IMG ו"נצרוב" אותו על הכרטיס.
 
 > לא יודעים איך? 
 [התקנה והפעלה של רספברי פיי](https://internet-israel.com/%d7%9e%d7%93%d7%a8%d7%99%d7%9b%d7%99%d7%9d/raspberrypi/%d7%94%d7%aa%d7%a7%d7%a0%d7%94-%d7%95%d7%94%d7%a4%d7%a2%d7%9c%d7%94-%d7%a9%d7%9c-%d7%a8%d7%a1%d7%a4%d7%91%d7%a8%d7%99-%d7%a4%d7%99%d7%99/)
 
 *חשוב מאוד* 
 אחרי סיום ההעתקה של האימייג' לכרטיס לפני שמוציאים את הכרטיס מהמחשב, 
-צריך להיכנס לכונן של הכרטיס (נמצא במחשב שלי), וליצור קובץ ריק בשם 
+ להיכנס לכונן של הכרטיס (נמצא במחשב שלי), וליצור קובץ ריק בשם 
 `ssh` 
 (פותח את ה-SSH בלי צורך לפתוח ידנית)
 
@@ -122,7 +122,7 @@ mkdir photoprism
 cd photoprism
 ```
 
-עכשיו נוריד קובץ ההגדרה של PhotoPrism למעבדי ARM
+ נוריד את קובץ ההגדרה של PhotoPrism למעבדי ARM
 
 ```
 wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
@@ -142,11 +142,11 @@ sudo docker-compose up -d
 
 עובד? מעולה 🚀
 
-### הגדרת אכסון חיצוני
+### הגדרת אחסון חיצוני
 
-עכשיו אנחנו רוצים להגדיר את הדיסק קשיח שישמש בתור האכסון של המדיה.
-חשוב לשים לב שחיבור אכסון חיצוני בלינוקס שונה ממה שרגילים ב-Windows,
-בלינוקס אחרי שמחברים התקן האכסון (לא משנה איזה) צריך להגדיר "הצמדה" של תיקיה שדרכה ניגש לאכסון.
+עכשיו אנחנו רוצים להגדיר את הדיסק קשיח שישמש בתור האחסון של המדיה.
+חשוב לשים לב שחיבור אחסון חיצוני בלינוקס שונה ממה שרגילים ב-Windows,
+בלינוקס אחרי שמחברים התקן האחסון (לא משנה איזה) צריך להגדיר "הצמדה" של תיקיה שדרכה ניגש לאחסון.
 
 נשמע מורכב? זה ממש ממש פשוט.
 
@@ -169,7 +169,7 @@ sudo lsblk -f
 
 <image-responsive class="center" imageURL="blog/photoprism-on-rsp/p2.jpg" />
 
-ניצור תיקיה תחת מדיה עבור האכסון שלנו
+ניצור תיקיה תחת מדיה עבור האחסון שלנו
 
 ```
 sudo mkdir /media/storage
@@ -206,12 +206,12 @@ sudo mount -a
 
 אם אין שגיאות, הדיסק הקשיח הוגדר כהלכה.
 
-עכשיו ניצור תיקיה בכונן החדש לאכסון כל הקבצים
+ ניצור תיקיה בכונן החדש לאחסון כל הקבצים
 ```
 mkdir /media/storage/photoprism
 ```
 
-עכשיו נערוך את הקובץ ההגדרה של PhotoPrism, כדי להגדיר את נתיב הקבצים, (וגם כדי לשנות סיסמאות ברירת מחדל, חשוב מאוד!)
+ נערוך את הקובץ ההגדרה של PhotoPrism, כדי להגדיר את נתיב הקבצים, (וגם כדי לשנות סיסמאות ברירת מחדל, חשוב מאוד!)
 
 גם כאן, לא חייבים nano 
 אפשר באמצעות כל עורך טקסט שקיים ברספברי או 
