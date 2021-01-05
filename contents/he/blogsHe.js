@@ -1,4 +1,5 @@
 export default [
+  'photoprism-on-rsp',
   'google-photos-alternative',
   'units-in-system',
   'mulit-platform-cpp',
