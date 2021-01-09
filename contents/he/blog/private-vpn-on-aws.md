@@ -58,6 +58,83 @@ description:  מדריך הפעלת VPN פרטי על גבי ענן AWS צעד �
 <image-responsive class="center" imageURL="blog/private-vpn-on-aws/m8.jpg" />
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# התקנה ללא רכישת OpenVPN AMI
+
+שימוש בAMI של 
+OpenVPN
+מהמרקטפלייס של AWS עולה כסף, 
+ואפילו יותר ממה שמשלמים לאמאזון עצמה על המכונה.
+
+ניתן גם להתקין את 
+OpenVPN 
+על 
+AMI
+(אימייג')
+רגיל, כך שהעלות תהיה רק על המכונה עצמה אבל זה דורש התקנה ידנית של 
+OpenVPN
+
+איך עושים את זה? זה קל.
+
+בממשק של 
+AWS
+בוחרים 
+AMI 
+של דביאן
+(נבדק על debian-stretch-hvm-x86_64-gp2-2019-04-27-83345)
+
+<image-responsive  imageURL="blog/private-vpn-on-aws/g0.jpg" />
+
+
+ב-Security Rules
+נוודא שהפורטים הבאים פתוחים 
+* TCP 443, 943, 945
+* UDP 1194
+
+<image-responsive  imageURL="blog/private-vpn-on-aws/g1.jpg" />
+
+מתחברים ב-SSH 
+(עם שם המשתמש admin ומפתח pkk בדיוק כמו מקודם)
+
+ומתחילים את ההתקנה עצמה
+
+עדכון המערכת
+```
+sudo apt update
+```
+
+התקנת כלי רשת
+```
+sudo apt install net-tools
+```
+
+הורדת 
+OpenVPN
+```
+curl -O http://swupdate.openvpn.org/as/openvpn-as-2.5.2-Debian9.amd_64.deb
+```
+
+התקנת 
+OpenVPN
+```
+sudo dpkg -i openvpn-as-2.5.2-Debian9.amd_64.deb
+```
+
+הרצת 
+OpenVPN
+```
+sudo /usr/local/openvpn_as/bin/ovpn-init
+```
+
+ואם נדרש למחוק קינפוג קיים אז להזין 
+`DELETE`
+
+ומכאן בדיוק כמו מקודם
 
 
 <br>
