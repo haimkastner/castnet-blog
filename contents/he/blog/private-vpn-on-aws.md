@@ -8,18 +8,60 @@ id: 'private-vpn-on-aws'
 description:  מדריך הפעלת VPN פרטי על גבי ענן AWS צעד אחר צעד
 ---
 
+🔐 במדריך הבא נלמד איך ליצור שרת 
+VPN פרטי בענן של AWS 🔐
+
+## מה זה בכלל VPN
+בגדול הרעיון הוא לנתב את כל תעבורת הרשת דרך מחשב אחר (שרת ה-VPN) כך שמבחינת מקבל הבקשה שלנו המחשב ששלח את הבקשה זה שרת ה-VPN ומבחינת ספקית האינטרנט שלנו (וכל מי ש"יושב" עליה, כמו המדינה) אנחנו ניגשנו לשרת ה-VPN.
+
+
+
+### למה זה טוב?
+להרבה דברים, למשל התחברות לרשת פנימית של ארגון, ועוד.
+
+אחת המטרות החשובות והמפורסמות זה ענייני פרטיות, ברגע שגולשים עם
+ VPN 
+הספקית ואיתה כל החברים שלהם (אהם אהם המדינה) יודעים רק שניגשתם 
+ל-VPN 
+אבל לא יודעים לאן באמת גלשתם. וגם לצד השני, האתר יודע שבאה אליו בקשה 
+מה-VPN
+ אבל לא יודע מי באמת שלח אותה.
+
+#### נשים לב שבמחינת האתר, כל זה רק ברמת ה-IP (יענו ה"מספר טלפון" האינטרנטי שלכם) אבל אם מתחברים או מזדהים באמצעות פייסבוק וכו' האתר בהחלט ידע גם ידע מי אתם בלי קשר לכתובת ממנה באתם.
+
+חשוב להבין 
+ש-VPN
+ זה לא איזה פתרון קסם לכל בעיות הפרטיות והמעקב ברשת אלא רק יוצר הפרדת תקשורת בין המחשב שלנו לבין השירות שמקבל את הבקשה.
+
+אחרי שהבנו את העיקרון מאחורי ה VPN קל להבין כמה קריטי ששירות ה VPN יהיה אמין ובטוח ולא חינמי, כי שרת הVPN יודע גם מי ביקש את הבקשה וגם לאן זה הלך, משמע הוא יודע הכל, ואם אתם.ן המוצר זה הופך להיות בעיה גדולה.
+
+אבל גם בבחירה בשירות בטוח ואמין, עדיין ישנם יתרונות מסוימים ביצירת שרת VPN פרטי.
+
+השוואה קצרה של ספק VPN מול שרת VPN פרטי (שכמובת לא כוללת את כל האספקטים!)
+
+
+- כתובות שירותי ה-VPN ידועים לכולם, ולכן גם הספקית\סינון\מדינה מבינים שאת.ה ניגש לשרת VPN ואולי יחלטו לחסום את התקשורת, וגם האתר אולי יחליט שהוא לא מעוניין לתת שירות למשתמשי VPN, אבל בשרת פרטי כתובת IP לא מזוהה כשירות VPN אלא ככתובת תמימה של AWS וסיכוי אפסי שיתחילו לחסום כתובות של AWS (ואם כן.. הבעיה האחרונה תהיה ה-VPN הקטן שלכם) , נכון גם לספק האינטרנט, וגם לאתר שאליו גולשים.
+- בשרת פרטי הכתובת בשליטתך,  רוצה להחליף? תרים מכונה חדשה והופ, יש חדש.
+- אין סיכוי שמישהו אחר יאסוף נתונים מהשרת, השרת הוא שלך ובשליטתך הבלעדית, כל עוד לא גונבים לך את המפתחות אליו כמובן 😄
+- מבחינת עומסים, סיכוי מאוד נמוך לבעיות בשרת פרטי כי זה שרת שרק אתם מתחברים אליו, בשונה מספק VPN שייתכנו עומסים, אם כי שוב זה תלוי באמינות סםק ה VPN.
+- עלות די דומה בס"כ אם כי בשרת פרטי העלות היא שעתית וניתן בכל רגע להוריד את השירות מהאוויר ולהפסיק לשלם.
+- כשאת.ה היחיד שמשתמש בכתובת IP אין הגנת "רעש" כמו בספק VPN שעוד אלפי אחרים גולשים דרכו גם, ולכן ברגע שמישהו הבין מה ה-IP שלך ויודע לקשר אליו את הIP של ה VPN הוא יכול עקרונית ל"תשאל"  את האתר אם הכתובת הייתה שם (זה ממש סיזיפי, אבל אפשרי).
+ 
+## יצירת שרת OpenVPN ב-AWS
+החלטתם ללכת על שרת פרטי? אתם לא צריכים להיות אנשי Devops! זה קל ופשוט.
+
 ראשית צריך ליצור (אם עדיין אין...) חשבון ב-
 [AWS](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#)
 (זה לא החשבון קניות ב Amazon הרגיל)
 
-חשוב מאוד לשים לב, מאוד מאוד מאוד מומלץ לשים סיסמה טובה ואימות דו שלבי, 
+> חשוב מאוד לשים לב, מאוד מאוד מאוד מומלץ לשים סיסמה טובה ואימות דו שלבי, 
 כי הכרטיס אשראי מוצמד לחשבון, 
 ואם האקר מצליח להכנס לחשבון הוא יכול לעשות ככל העולה על רוחו 
 ובפוטנציאל לבצע פעולות בעלות של אלפי דולרים לפני שבכלל אפשר לשים לב 
-(וכן מומלץ גם להגדיר התראות במששק כל שישלחו התראות בחריגה מסכום חיוב משוער מסוים)
+(וכן מומלץ גם להגדיר התראות בממשק כך ש-AWSישלחו התראות בחריגה מסכום חיוב משוער מסוים)
 
 
-אחרי שסיימנו את יצירת החשבון הגיע הזמן להרים את המכונה!
+אחרי שסיימנו את יצירת החשבון הגיע הזמן להרים את המכונה 💪
 
 המדריך אמור להתאים גם ללא ידע מוקדם או הבנה במחשוב ענן ובכלל, אם כי ממליץ לקרוא את הטקסט ולהבין את הפעולות 
 (וזה בכלל לא מסובך!)
@@ -27,7 +69,7 @@ description:  מדריך הפעלת VPN פרטי על גבי ענן AWS צעד �
 ראשית נכנס ללשונית של השירותים ונבחר ב
 EC2
 שזה שירות הרצת מכונות וירטואליות עם גישה מהרשת
-שזה בעצם בדיוק מה שאנחנו רוצים, מחשב בענן של אמאזון.
+שזה בעצם בדיוק מה שאנחנו רוצים, מחשב בענן של AWS.
 
 <image-responsive imageURL="blog/private-vpn-on-aws/1.jpeg" />
 
@@ -41,22 +83,22 @@ EC2
 AMI
 שזה בעצם אימייג'
 
-(מה זה אימייג? לצורך העניין זה מערכת הפעלה מוכנה לשימוש עם סט התקנות נדרשות מותקנות מראש)
+(מה זה אימייג'? לצורך העניין זה מערכת הפעלה מוכנה לשימוש עם סט התקנות נדרשות מותקנות מראש)
 
 נבחר בטאב
-AWS Marketplace
+`AWS Marketplace`
 ובחיפוש
-openvpn
+`openvpn`
 
 ו
-select
+`select`
 
 (האימייג המוצג מוגבל ל-2 מכשירים במקביל ניתן גם לבחור עם 10 או 25 חיבורים מקבילים)
 <image-responsive imageURL="blog/private-vpn-on-aws/4.jpeg" />
 
 חשוב לשים לב ששימוש באימייג עולה כסף 
 (פר שעה)
-*נוסף* 
+<b>נוסף</b> 
 על החיוב הרגיל של AWS
 
 ניתן להשתמש ב
@@ -64,18 +106,20 @@ AMI
 ללא עלות נוספת (לבד מהחיוב הרגיל ל
 AWS)
 אבל זה דורש התעסקות עם התקנות
-בסוף המדריך יש נספח, לדעתי שווה את זה.
+בסוף המדריך יש נספח איך
+, לדעתי שווה את זה.
 
 <image-responsive imageURL="blog/private-vpn-on-aws/5.jpeg" />
 
 נבחר את סוג המכונה שאנחנו רוצים, לצורך הדוגמה וכנראה לשימוש אישי 
 t2.micro 
-בהחלט מספיק
+בהחלט מספיק.
+
 לא מספיק לכם? תמיד אפשר ליצור מחדש ולבחור מכונה חזקה יותר, רק שימו לב לחיובים
-:)
+😏
 <image-responsive imageURL="blog/private-vpn-on-aws/6.jpeg" />
 
-כאן אין מה לשנות פשוט להמשיך עם ההגדרות הדיפולטיות
+בחלון הבא אין מה לשנות פשוט להמשיך עם ההגדרות הדיפולטיות
 <image-responsive imageURL="blog/private-vpn-on-aws/7.jpeg" />
 
 נרים את המכונה
@@ -85,7 +129,7 @@ t2.micro
 (אפשר לבחור כמובן גם מפתח קיים, אם קיים)
 חשוב מאוד להוריד ולשמוש את המפתח במקום שמור, זה המפתח גישה למכונה.
 
-ו.. נרים את המכונה
+ו.. נעלה את המכונה לאוויר
 <image-responsive imageURL="blog/private-vpn-on-aws/9.jpeg" />
 
 נמתין ל
@@ -109,29 +153,29 @@ IP
 
 נתקין 
 [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-על המחשב
+על המחשב.
 
 בסיום ההתקנה נחפש את התכנה 
-puttygen
+`puttygen`
 בכדי להמיר את הקובץ מפתח שהורדנו מפורמט
-pem
+`pem`
 לפורמט
-pkk
+`pkk`.
 
 נפתח את התכנה, ונבחר ב
-conversions -> import key
+`conversions` -> `import key`
 נבחר את קובץ ה
-pem
-שהורדנו מקודם
+`pem`
+שהורדנו מקודם.
 
-<image-responsive imageURL="blog/private-vpn-on-aws/15.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/15.jpeg" />
 
 וניצור קובץ
 pkk
-<image-responsive imageURL="blog/private-vpn-on-aws/16.jpeg" />
+<image-responsive class="center" class="center" imageURL="blog/private-vpn-on-aws/16.jpeg" />
 
 נאשר
-<image-responsive imageURL="blog/private-vpn-on-aws/17.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/17.jpeg" />
 
 והגיע הזמן להתחבר למכונה ב-
 SSH
@@ -142,40 +186,41 @@ putty
 ונזין את השם והכתובת
 `openvpn@{the public ip}`
 
-<image-responsive imageURL="blog/private-vpn-on-aws/18.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/18.jpeg" />
 
 בעץ התפריט נבחר
-connection -> SSH -> Auth
+`connection` -> `SSH` -> `Auth`
 ונטען את קובץ ה
-pkk
+`pkk`
 
 ונלחץ על 
-open
-<image-responsive imageURL="blog/private-vpn-on-aws/19.jpeg" />
+`open`
+<image-responsive  class="center" imageURL="blog/private-vpn-on-aws/19.jpeg" />
 
 נאשר את הסכם השימוש
 `yes`
-<image-responsive imageURL="blog/private-vpn-on-aws/20.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/20.jpeg" />
 
 ונקסט נקסט נקסט 
 (מקש ה  `Enter`)
 
-<image-responsive imageURL="blog/private-vpn-on-aws/21.jpeg" />
-<image-responsive imageURL="blog/private-vpn-on-aws/22.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/21.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/22.jpeg" />
 
 והשרת מוכן!
-<image-responsive imageURL="blog/private-vpn-on-aws/23.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/23.jpeg" />
 
 נזין את הפקודות הבאות בכדי להגדיר סיסמה
 
-```sudo su
+```
+sudo su
 ```
 ```
 passwd openvpn
 ```
 
 ונזין פעמיים את הסיסמה שאנו מעוניינים בה
-<image-responsive imageURL="blog/private-vpn-on-aws/24.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/24.jpeg" />
 
 ניגש בדפדפן לכתובת הציבורית של השרת עם הפורט 
 `943`
@@ -189,18 +234,18 @@ passwd openvpn
 
 נבחר ב
 `מתקדם`
-<image-responsive imageURL="blog/private-vpn-on-aws/25.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/25.jpeg" />
 
 ונבחר להמשיך לאתר
-<image-responsive imageURL="blog/private-vpn-on-aws/26.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/26.jpeg" />
 
 נזין את שם המשתמש
 `openvpn`
 ואת הסיסמה שיצרנו מקודם
-<image-responsive imageURL="blog/private-vpn-on-aws/27.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/27.jpeg" />
 
 עוד משהו לאשר
-<image-responsive imageURL="blog/private-vpn-on-aws/28.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/28.jpeg" />
 
 נלך ל
 `vpn settings`
@@ -211,18 +256,38 @@ passwd openvpn
 תקפוץ התראה בראש הדף
 ונבחר לעדכן גם מה שרץ כרגע
 
-עכשיו השרת מוגדר כהלכה
-<image-responsive imageURL="blog/private-vpn-on-aws/31.jpeg" />
+עכשיו השרת מוגדר כהלכה 
+🚀🚀🚀
 
-עכשיו נזין שוב בשורת הכתובת הפעם בלי תוספת 
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/31.jpeg" />
+
+<br>
+<br>
+<br>
+
+
+אם השרת לא בשימוש כדאי למחוק אותו, עולה 💲💲💲 להחזיק סתם באוויר.
+
+<image-responsive imageURL="blog/private-vpn-on-aws/40.jpeg" />
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+## חיבור Windows לשרת ה-VPN
+נזין שוב בשורת הכתובת הפעם בלי תוספת 
 `admin`
-<image-responsive imageURL="blog/private-vpn-on-aws/30.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/30.jpeg" />
 
 נזין שם משתמש וסיסמה כמו מקודם
 ונבחר את הקליינט שנרצה להוריד
 
- לצורך ההמחשה נוריד את של חלונות
-<image-responsive imageURL="blog/private-vpn-on-aws/32.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/32.jpeg" />
 
 אחרי ההורדה נתקין את התכנה 
 
@@ -230,36 +295,42 @@ passwd openvpn
  
  נלחץ עליו
 
-<image-responsive imageURL="blog/private-vpn-on-aws/33.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/33.jpeg" />
 
 נצא מהטיפים (או שלא...)
-<image-responsive imageURL="blog/private-vpn-on-aws/34.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/34.jpeg" />
 
 נאשר הכל
 
-<image-responsive imageURL="blog/private-vpn-on-aws/35.jpeg" />
-<image-responsive imageURL="blog/private-vpn-on-aws/36.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/35.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/36.jpeg" />
 
 ונפעיל את החיבור
 
-<image-responsive imageURL="blog/private-vpn-on-aws/37.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/37.jpeg" />
 
 נזין שם משתמש וסיסמה כמו מקודם
 
-<image-responsive imageURL="blog/private-vpn-on-aws/38.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/38.jpeg" />
 
 ו.. הנה אנחנו גולשים כמו מאירלנד!!!
 
-<image-responsive imageURL="blog/private-vpn-on-aws/39.jpeg" />
+<image-responsive class="center" imageURL="blog/private-vpn-on-aws/39.jpeg" />
 
-אם השרת לא בשימוש כדאי לכבות או למחוק אותו, זה עולה כסף להחזיק סתם באוויר.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<image-responsive imageURL="blog/private-vpn-on-aws/40.jpeg" />
-
-
+## חיבור טלפון לשרת ה-VPN
 וכמובן ה-
 VPN
-זמין גם מהטלפון, נלך לגוגל פליי (אפשר כמובן גם להוריד ידנית אם כי פחות מומלץ)
+זמין גם מהטלפון, נלך ל
+[Google Play](https://play.google.com/store/apps/details?id=net.openvpn.openvpn)
+ (אפשר כמובן גם להוריד ידנית אם כי פחות מומלץ)
 
 ונתקין את
 `OpenVPN Connect`
@@ -302,7 +373,7 @@ IP
 שימוש בAMI של 
 OpenVPN
 מהמרקטפלייס של AWS עולה כסף, 
-ואפילו יותר ממה שמשלמים לאמאזון עצמה על המכונה.
+ואפילו מעט יותר ממה שמשלמים לAWS עצמה על המכונה.
 
 ניתן גם להתקין את 
 OpenVPN 
@@ -367,7 +438,9 @@ sudo /usr/local/openvpn_as/bin/ovpn-init
 ואם נדרש למחוק קינפוג קיים אז להזין 
 `DELETE`
 
-ומכאן בדיוק כמו מקודם
+
+ומכאן בדיוק כמו מקודם 
+(רק ביותר זול 😉)
 
 
 <br>
