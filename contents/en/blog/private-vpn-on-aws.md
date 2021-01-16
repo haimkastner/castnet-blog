@@ -5,7 +5,7 @@ year: '10 January 2021'
 color: '#8e7964'
 trans: 'private-vpn-on-aws'
 id: 'private-vpn-on-aws'
-description: Step by step manual to configure privet and secure VPN server on AWS cloud
+description: Step by step manual to configure private and secure VPN server on AWS cloud
 ---
 
 
@@ -14,7 +14,7 @@ description: Step by step manual to configure privet and secure VPN server on AW
 ## What is a VPN 
 The idea is to route all network traffic through another computer (the VPN server) so in terms of our request recipient the computer that sent the request is the VPN server and in terms of our ISP  we accessed the server the VPN only.
 
-You can read more about it here and here.
+You can read more about it [here](https://en.wikipedia.org/wiki/Virtual_private_network) and [here](https://www.howtogeek.com/133680/htg-explains-what-is-a-vpn/).
 
 Once we understand the principle behind the VPN it is easy to understand how critical for a VPN provider to be reliable and secure, because the VPN provider knows who sent the request and where it is going, meaning he knows everything.
 
@@ -34,8 +34,8 @@ A brief comparison of a VPN provider VS a private VPN server (which does not inc
 Once you decided to create a private VPN server you can do it within minutes, It's easy and simple.
 
 
-First of all, you need to create (if not have yet ...) and login th an [AWS](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#) account.
-(This is not the regular Amazon shopping account)
+First of all, you need to create (if you don't have yet) and login to the [AWS](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#) account.
+(this is not the regular Amazon shopping account)
 
 > It is very important to pay attention, it is highly recommended to put a good password and two-step verification.
 Since that your credit card is attached to the account,
