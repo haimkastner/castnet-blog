@@ -1,4 +1,5 @@
 export default [
+  'private-vpn-on-aws',
   'photoprism-on-rsp',
   'google-photos-alternative',
   'units-in-system',

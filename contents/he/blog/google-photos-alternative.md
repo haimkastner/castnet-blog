@@ -187,7 +187,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 <image-responsive class="center" imageURL="blog/google-photos-alternative/10.png" />
 
 
-נפתח בדפדפן את הדף  [http://localhost:2342/](http://localhost:2342/) ובסיסמה נכניס `please-change`. 
+נפתח בדפדפן את הדף  [http://localhost:2342/](http://localhost:2342/) ובסיסמה נכניס `insecure`. 
 
 זהו סיימנו!
 
