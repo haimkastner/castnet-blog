@@ -12,20 +12,20 @@ description: Step by step manual to configure private and secure VPN server on A
 🔐 In this tutorial we will learn how to create a private VPN server on the AWS cloud 🔐
 
 ## What is a VPN 
-The idea is to route all network traffic through another computer (the VPN server) so in terms of our request recipient the computer that sent the request is the VPN server and in terms of our ISP we accessed to the VPN only.
+The idea is to route all network traffic through another computer (the VPN server) so in terms of our request recipient the computer that sending the request is the VPN server and in terms of our ISP we accessing to the VPN only.
 
 You can read more about it [here](https://en.wikipedia.org/wiki/Virtual_private_network) and [here](https://www.howtogeek.com/133680/htg-explains-what-is-a-vpn/).
 
-Once we understand the principle behind the VPN it is easy to understand how critical for a VPN provider to be reliable and secure, because the VPN provider knows who sent the request and where it is going, meaning he knows everything.
+Once we understand the principle behind the VPN it is easy to understand how critical for a VPN provider to be reliable and secure, because the VPN provider knows who sent the request and what is the final destination, meaning the VPN provider knows everything.
 
-But even with the choice of a safe and reliable provider, there are still some advantages to creating your own private VPN server.
+But even for a safe and reliable provider, there are still some advantages to creating your own private VPN server.
 
 A brief comparison of a VPN provider VS a private VPN server (which does not include all aspects!)
 
 
 - The addresses of the VPN providers are known to everyone, so your ISP also knows that you are accessing a VPN server and may decide to block the communication, and on the other hand, the site/service you want to access may also decide that it does not want to serve VPN users, but when using unfamiliar AWS addresses there is zero chance that the ISP will start blocking AWS addresses (and if so .. the last problem will be your small VPN), and also the site/server can't know that you're using VPN.
-- The VPN address is under your control, want to replace it? it's easy, just create a new server with a new IP, that's all.
-- There is no chance that someone else will collect data or logs from your VPN server, the server is yours and under your control, as long as you are keeping the access key secure 😄
+- In a private VPN server, the address is under your control, want to replace it? it's easy, just create a new server with a new IP, that's all.
+- In a private VPN server, there is no chance that someone else will collect data or logs from your VPN server, the server is yours and under your control, as long as you are keeping the access key secure 😄
 - There is a very low chance to face load issues with a private server because only you connect to it, unlike any VPN provider that may have loads issues, but it depends on the reliability of the VPN provider.
 - The cost in both options is quite the same in total although on a private VPN the cost is per hour and not per month.
 - When you're the only one using an IP address there is no "noise" protection like as in a VPN provider that thousands of other people using the same IP through as well, so if someone knows what your IP is, and has the visitors list of a site/service to, it's possible to detect your activity in this service (it's really very hard to do that, but possible).
@@ -37,11 +37,7 @@ Once you decided to create a private VPN server you can do it within minutes, It
 First of all, you need to create (if you don't have yet) and login to the [AWS](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#) account.
 (this is not the regular Amazon shopping account)
 
-> It is very important to pay attention, it is highly recommended to put a good password and set two-step verification.
-since that your credit card is attached to the account,
-if a hacker manages to get into the account he can do whatever he wants.
-And the potential to perform operations that will cost you thousands of dollars before you can even notice.
-(and it is also recommended to set up alerts using AWS dashboard so AWS will send alerts when you exceed your approximate billing amount)
+> Pay attention, it's highly recommended to put a good password and set two-step verification, since that yours credit card is attached to the account, if a hackers manages to get into the account they can perform operations that will cost you thousands of dollars before you can even notice. (and it is also recommended to set up alerts using AWS dashboard so AWS will send alerts when you exceed your approximate billing amount)
 
 
 First, go to the Services tab and select
@@ -50,11 +46,11 @@ the AWS virtual machines service, which is exactly what we need, a computer on t
 
 <image-responsive imageURL="blog/private-vpn-on-aws/1.jpeg" />
 
-We will choose the region where we are interested in being hosted, we will probably prefer a region that is physically close to us, so our communication to the cloud will be as fast as it is possible.
+Choose the region where you are interested in being hosted, prefer a region that is physically close to you, so the communication to the cloud will be as fast as it is possible.
 
 <image-responsive imageURL="blog/private-vpn-on-aws/2.jpeg" />
 
-After we have selected the region where we will host the server, it is time to create a machine instance.
+After region selection, it is time to create a machine instance.
 
 <image-responsive imageURL="blog/private-vpn-on-aws/3.jpeg" />
 
@@ -383,4 +379,4 @@ And from now and on just as with the original AMI.
 
 ----
 
-Photo by <a href="https://burst.shopify.com/@ndekhors?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Key+To+Padlock+In+Hand&amp;utm_medium=referral&amp;utm_source=credit">Nicole De Khors</a> from <a href="https://burst.shopify.com/api-home-furniture?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Key+To+Padlock+In+Hand&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
+Photo by <a href="https://burst.shopify.com/@ndekhors?utm_campaign=photo_credit&amp;utm_content=Free+Stock+Photo+of+Computer+Security+Lock+And+Payment+%E2%80%94+HD+Images&amp;utm_medium=referral&amp;utm_source=credit">Nicole De Khors</a> from <a href="https://burst.shopify.com/technology?utm_campaign=photo_credit&amp;utm_content=Free+Stock+Photo+of+Computer+Security+Lock+And+Payment+%E2%80%94+HD+Images&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
