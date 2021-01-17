@@ -1,7 +1,7 @@
 ---
 name: 'private-vpn-on-aws'
 title: 'Private VPN server on AWS Cloud'
-year: '10 January 2021'
+year: '17 January 2021'
 color: '#8e7964'
 trans: 'private-vpn-on-aws'
 id: 'private-vpn-on-aws'
@@ -12,7 +12,7 @@ description: Step by step manual to configure private and secure VPN server on A
 🔐 In this tutorial we will learn how to create a private VPN server on the AWS cloud 🔐
 
 ## What is a VPN 
-The idea is to route all network traffic through another computer (the VPN server) so in terms of our request recipient the computer that sent the request is the VPN server and in terms of our ISP  we accessed the server the VPN only.
+The idea is to route all network traffic through another computer (the VPN server) so in terms of our request recipient the computer that sent the request is the VPN server and in terms of our ISP we accessed to the VPN only.
 
 You can read more about it [here](https://en.wikipedia.org/wiki/Virtual_private_network) and [here](https://www.howtogeek.com/133680/htg-explains-what-is-a-vpn/).
 
@@ -23,12 +23,12 @@ But even with the choice of a safe and reliable provider, there are still some a
 A brief comparison of a VPN provider VS a private VPN server (which does not include all aspects!)
 
 
-- The addresses of the VPN providers are known to everyone, so your ISP also knows that you are accessing a VPN server and may decide to block the communication, and on the other hand, the site/service you want to access may also decide that it does not want to serve VPN users, but when using unfamiliar AWS addresses there is zero chance that the ISP will start blocking AWS addresses (and if so .. the last problem will be your small VPN), and also the site/server can\t know that you're using VPN.
+- The addresses of the VPN providers are known to everyone, so your ISP also knows that you are accessing a VPN server and may decide to block the communication, and on the other hand, the site/service you want to access may also decide that it does not want to serve VPN users, but when using unfamiliar AWS addresses there is zero chance that the ISP will start blocking AWS addresses (and if so .. the last problem will be your small VPN), and also the site/server can't know that you're using VPN.
 - The VPN address is under your control, want to replace it? it's easy, just create a new server with a new IP, that's all.
 - There is no chance that someone else will collect data or logs from your VPN server, the server is yours and under your control, as long as you are keeping the access key secure 😄
-- There is a very low chance to face load issues with a private server because only you connect to, unlike any VPN provider that may have loads issues, but it depends on the reliability of the VPN provider.
+- There is a very low chance to face load issues with a private server because only you connect to it, unlike any VPN provider that may have loads issues, but it depends on the reliability of the VPN provider.
 - The cost in both options is quite the same in total although on a private VPN the cost is per hour and not per month.
-- When you're the only one using an IP address there is no "noise" protection like as in a VPN provider that thousands of other people using the same IP through as well, so if someone knows what your IP is and it is possible to "ask" the site/service If the address was there (it's really very hard to do that, but possible).
+- When you're the only one using an IP address there is no "noise" protection like as in a VPN provider that thousands of other people using the same IP through as well, so if someone knows what your IP is, and has the visitors list of a site/service to, it's possible to detect your activity in this service (it's really very hard to do that, but possible).
  
 ## Create an OpenVPN server on AWS Cloud
 Once you decided to create a private VPN server you can do it within minutes, It's easy and simple.
@@ -37,11 +37,11 @@ Once you decided to create a private VPN server you can do it within minutes, It
 First of all, you need to create (if you don't have yet) and login to the [AWS](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#) account.
 (this is not the regular Amazon shopping account)
 
-> It is very important to pay attention, it is highly recommended to put a good password and two-step verification.
-Since that your credit card is attached to the account,
-If a hacker manages to get into the account he can do whatever he wants.
+> It is very important to pay attention, it is highly recommended to put a good password and set two-step verification.
+since that your credit card is attached to the account,
+if a hacker manages to get into the account he can do whatever he wants.
 And the potential to perform operations that will cost you thousands of dollars before you can even notice.
-(And it is also recommended to set up alerts using AWS dashboard so AWS will send alerts when you exceed your approximate billing amount)
+(and it is also recommended to set up alerts using AWS dashboard so AWS will send alerts when you exceed your approximate billing amount)
 
 
 First, go to the Services tab and select
@@ -58,7 +58,7 @@ After we have selected the region where we will host the server, it is time to c
 
 <image-responsive imageURL="blog/private-vpn-on-aws/3.jpeg" />
 
-selected
+select
 AMI
 (which is actually an OS image)
 
