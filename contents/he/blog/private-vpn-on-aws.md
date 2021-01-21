@@ -5,7 +5,7 @@ year: 17 בינואר 2021
 color: '#8e7964'
 trans: 'private-vpn-on-aws'
 id: 'private-vpn-on-aws'
-description: מדריך הפעלת שרת VPN פרטי על גבי הענון של AWS, צעד אחר צעד.
+description: מדריך הפעלת שרת VPN פרטי על גבי הענן של AWS, צעד אחר צעד.
 ---
 
 🔐 במדריך הבא נלמד איך ליצור שרת 
