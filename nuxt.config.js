@@ -7,11 +7,12 @@ import blogsHe from './contents/he/blogsHe.js'
 
 const productionUrl = {
   en: "/en",
-  he: "/he"
+  he: "/"
 };
 const baseUrl = 'https://blog.castnet.club';
 
 module.exports = {
+	target: 'static',
   env: {
     baseUrl,
     productionUrl,
@@ -212,9 +213,9 @@ module.exports = {
 
   generate: {
     routes: [
-      '/he', '404'
+      '404'
     ]
       .concat(blogsHe.map(w => `/blog/${w}`))
-      .concat(blogsEn.map(w => `en/blog/${w}`))
+      .concat(blogsEn.map(w => `/en/blog/${w}`))
   }
 }

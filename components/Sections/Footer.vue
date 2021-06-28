@@ -19,7 +19,7 @@
             |
             <a
               target="_blank"
-              :href="`${local === 'he' ? '' : `/${local}`}/feed`"
+              :href="local === 'he' ? 'https://blog.castnet.club/feed' : 'https://blog.castnet.club/en/feed'"
               class="ani"
             >
               <span>RSS</span>
