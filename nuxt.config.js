@@ -82,15 +82,6 @@ module.exports = {
           }
         }
       }, {
-          test: /\.(jpe?g|png)$/i,
-          loader: 'responsive-loader',
-          options: {
-            placeholder: true,
-            quality: 60,
-            size: 1400,
-            adapter: require('responsive-loader/sharp')
-          }
-        }, {
           test: /\.(gif|svg)$/,
           loader: 'url-loader',
           query: {
