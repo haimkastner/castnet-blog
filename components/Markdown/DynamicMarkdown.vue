@@ -2,6 +2,7 @@
   import InlineCode from './InlineCode.vue'
   import hljs from 'highlight.js/lib/highlight'
   import javascript from 'highlight.js/lib/languages/javascript'
+  import typescript from 'highlight.js/lib/languages/typescript'
   import json from 'highlight.js/lib/languages/json'
   import cpp from 'highlight.js/lib/languages/cpp'
   import css from 'highlight.js/lib/languages/css'
@@ -11,6 +12,9 @@
   import bash from 'highlight.js/lib/languages/bash'
   import cs from 'highlight.js/lib/languages/cs'
   hljs.registerLanguage('javascript', javascript)
+  hljs.registerLanguage('js', javascript)
+  hljs.registerLanguage('typescript', typescript)
+  hljs.registerLanguage('ts', typescript)
   hljs.registerLanguage('json', json)
   hljs.registerLanguage('css', css)
   hljs.registerLanguage('xml', xml)
