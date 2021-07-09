@@ -1,4 +1,5 @@
 export default [
+  'js-best-practices-config-linter-part-b',
   'js-best-practices-config-ts-part-a',
   'private-vpn-on-aws',
   'photoprism-on-rsp',

@@ -1,6 +1,6 @@
 ---
 name: 'js-best-practices-config-ts-part-a'
-title: 'הגדרת סביבת פיתוח ל-Node.JS - הגדרת TypeScript'
+title: 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת TypeScript'
 year: 9 ביולי 2021
 color: '#8e7964'
 id: 'js-best-practices-config-ts-part-a'
@@ -28,6 +28,7 @@ description:  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.J
 
 אז... לעבודה, ראשית ניצור תיקייה ריקה נקרא לה לצורך העניין
 `js-project-best-practice`.
+
 בתוכה נפתח את הטרמינל\חלון הפקודה  וניצור פרוייקט JS חדש בעזרת הפקודה 
 `npm init`.
 
@@ -53,7 +54,10 @@ npm i --save-dev typescript @types/node
 * `target` - בעזרתו מוגדרת גרסת הJS שאיתה נשתמש, אז אלא אם יש סיבה טובה לתמוך במנוע JS  ישן, כדאי לשים שם ESNEXT או ES2021
 * `declaration`, `declarationMap`, `sourceMap` - נגדיר בהם `true` במידה 
 ומטרת הפרוייקט היא להיות ספרייה ואנו מעוניינים לקבל את קבצי המיפוי והצהרות הטייפים אחרי הבילד.
-* `outDir` - בו מוגדר הנתיב אליו יישמרו הקבצים שייבנו בתהליך הבילד של TypeScript נשנה את הערך ל `./dist`.
+* `outDir` - בו מוגדר הנתיב אליו יישמרו הקבצים שייבנו בתהליך הבילד של TypeScript נשנה את הערך ל
+```bash
+./dist
+```
 * `types` - בו מגדירים טייפים גלובליים שרלוונטיים לכל הפרוייקט, 
 מאחר ואנחנו רוצים להשתמש בטייפים של Node נוסיף תחת האובייקט `compilerOptions`  את האובייקט הבא
 ```json
@@ -87,7 +91,7 @@ npm i --save-dev typescript @types/node
 בשביל לבדוק שאכן הגדרנו הכל כמו שצריך  ניצור תיקיה בשם `src` בפרוייקט  בתוכה ניצור קובץ בשם `index.ts`
  ובתוכנו נכתוב את הקוד התמים הבא:
 ```typescript
- * Calculate add number :)
+/* Calculate add number :)
  * @param a The first number
  * @param b The seconds number
  * @returns The add results
@@ -100,7 +104,7 @@ export function addNumbers(a: number, b: number): number {
 
 מעולה! יש לנו עכשיו פרוייקט TypeScript מוגדר ומוכן לשימוש.
 
-בחלק הבא - נלמד איך להוסיף לינטר לפרוייקט כך שנמנע מעצמנו בעיות כמו למשל לקרוא למשתנה לפני שהוא הוגדר 😲
+> [במאמר הבא](/blog/js-best-practices-config-linter-part-b) נלמד איך להוסיף לינטר לפרוייקט כך שנמנע מעצמנו בעיות כמו למשל לקרוא למשתנה לפני שהוא הוגדר 😲
 
 ----
 
