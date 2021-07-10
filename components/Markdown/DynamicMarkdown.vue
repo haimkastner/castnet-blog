@@ -11,6 +11,9 @@
   import makefile from 'highlight.js/lib/languages/makefile'
   import bash from 'highlight.js/lib/languages/bash'
   import cs from 'highlight.js/lib/languages/cs'
+  import yaml from 'highlight.js/lib/languages/yaml'
+  import markdown from 'highlight.js/lib/languages/markdown'
+	
   hljs.registerLanguage('javascript', javascript)
   hljs.registerLanguage('js', javascript)
   hljs.registerLanguage('typescript', typescript)
@@ -23,6 +26,9 @@
   hljs.registerLanguage('cpp', cpp)
   hljs.registerLanguage('bash', bash)
   hljs.registerLanguage('cs', cs)
+  hljs.registerLanguage('yaml', yaml)
+  hljs.registerLanguage('markdown', markdown)
+	
   import 'highlight.js/styles/a11y-light.css'
 
   export default {

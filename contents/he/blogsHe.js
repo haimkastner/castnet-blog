@@ -1,4 +1,6 @@
 export default [
+	'js-best-practices-config-ci-part-d',
+  'js-best-practices-config-unit-tests-part-c',
   'js-best-practices-config-linter-part-b',
   'js-best-practices-config-ts-part-a',
   'private-vpn-on-aws',

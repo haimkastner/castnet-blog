@@ -8,9 +8,19 @@ description:  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.J
 ---
 
 ----
-> [חלק א](/blog/js-best-practices-config-ts-part-a) – הגדרת פרוייקט TS
-
+> *הגדרת סביבת פיתוח ל-Node.JS*
+>
+> [חלק א'](/blog/js-best-practices-config-ts-part-a) – הגדרת פרוייקט TS
+>
+> <ins>[חלק ב'](/blog/js-best-practices-config-linter-part-b) – הגדרת לינטר</ins>
+>
+> [חלק ג'](/blog/js-best-practices-config-unit-tests-part-c) – הגדרת בדיקות יחידה
+>
+> [חלק ד'](/blog/js-best-practices-config-ci-part-d) – הגדרת תהליך אינטגרציה אוטומטית
 ----
+
+<br>
+<br>
 
 אחרי שהגדרנו את סביבת הפיתוח של הפרוייקט, 
 חשוב מאוד 
