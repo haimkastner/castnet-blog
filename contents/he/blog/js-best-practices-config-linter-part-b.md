@@ -273,8 +273,7 @@ module.exports = {
 
 ומעכשיו מבנה הקוד של הפרוייקט שלנו בטוח יהיה תקין ומסודר 💪 💪 💪
 
-בחלק הבא נלמד איך לוודא שהלוגיקה עצמה שכתבנו לא תישבר ושבכל שינוי של לוגיקה שום דבר לא נדפק בטעות (או בזדון 😱) בעזרת בדיקות יחידה.
-
+> [במאמר הבא](/blog/js-best-practices-config-unit-tests-part-c) נלמד איך לוודא שהלוגיקה עצמה שכתבנו לא תישבר ושבכל שינוי של לוגיקה שום דבר לא נדפק בטעות (או בזדון 😱) בעזרת בדיקות יחידה
 
 ----
 

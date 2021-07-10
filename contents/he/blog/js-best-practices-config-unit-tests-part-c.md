@@ -187,8 +187,9 @@ npm i --save-dev mocha-lcov-reporter nyc
 <image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.PNG" />
 
 
-מה עוד אפשר לעשות עם הדו"ח הזה? 
-[במאמר הבא](/blog/js-best-practices-config-ci-part-d)
+> מה עוד אפשר לעשות עם הדו"ח הזה? 
+>
+> [במאמר הבא](/blog/js-best-practices-config-ci-part-d)
 נראה איך לארגן אינטגרציה מלאה של כל הטוב שסידרנו עד עכשיו, יחד לכדי מכונה משומנת ואוטומטית 🐱‍🏍.
 
 ----
