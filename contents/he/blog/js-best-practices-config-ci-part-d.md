@@ -131,11 +131,11 @@ jobs: # The jobs collection to run
 נחמד, נכון?
 
 עכשיו בא ננצל את זה שיש לנו דו"ח מסודר על 
-הטסטים כדי לקבל דשבורד יפה עם סטטיסטיקות ממלללא מידע 📊 📊 📊
+הטסטים כדי לקבל דשבורד יפה עם סטטיסטיקות כיסוי לפי זמן\בראנצ' 🧮
 
 לצורך כך נתחבר ל- 
 [coveralls.io](https://coveralls.io/)
-עם החשבון ה-GitHub.
+עם חשבון ה-GitHub.
 
 ניתן להם גישה לריפוסיטורי אותו אנו מעוניין להציג
 
@@ -204,10 +204,10 @@ jobs: # The jobs collection to run
 
 זהו הכל מוכן, 
 נשאר רק להוסיף בדג'טים חמודים 
-ב-`README.md` 
-  של הפרוייקט שיציג את הסטטוס של הבילד ושל הכיסוי של הטסטים,
-ניצור קובץ `README.md` אם לא קיים עדיין
-נכתוב בו ב-[markdown](https://www.markdownguide.org/)
+ הפרוייקט שיציגו את הסטטוס של הבילד ושל הכיסוי של הטסטים.
+
+ניצור קובץ `README.md` ,אם לא קיים עדיין
+ונכתוב בו ב-[markdown](https://www.markdownguide.org/)
 כמה מילים על הפרוייקט שלנו.
 
 זה המקום לכתוב למה הפרוייקט מיועד 
@@ -245,8 +245,8 @@ Includes
 The articles about it is available in [blog.castnet](https://blog.castnet.club/blog/js-best-practices-config-ts-part-a)
 ```
 
-נדחוף את הקובץ ל
- -GitHub ועכשיו נוכל לראות את הבדג'טים מוצגים
+נדחוף את הקובץ ל-GitHub
+ ועכשיו נוכל לראות את הבדג'טים מוצגים
 
 <image-responsive imageURL="blog/js-best-practices-config-ci-part-d/readme-1.PNG" />
 <br>

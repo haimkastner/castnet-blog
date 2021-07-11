@@ -62,7 +62,7 @@ import { expect } from 'chai';
 import { addNumbers } from './index';
 ```
 
-נגדיר אוסף של טסט\טים 
+נגדיר אוסף של טסט\ים 
 ```ts
 describe('#Test addNumbers logic', () => {
 	// The tests are here
@@ -190,7 +190,7 @@ npm i --save-dev mocha-lcov-reporter nyc
 > מה עוד אפשר לעשות עם הדו"ח הזה? 
 >
 > [במאמר הבא](/blog/js-best-practices-config-ci-part-d)
-נראה איך לארגן אינטגרציה מלאה של כל הטוב שסידרנו עד עכשיו, יחד לכדי מכונה משומנת ואוטומטית 🐱‍🏍.
+נראה איך לארגן אינטגרציה מלאה של כל הטוב שסידרנו עד עכשיו, יחד לכדי מכונה משומנת ואוטומטית 🥊.
 
 ----
 
