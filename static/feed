@@ -4,7 +4,7 @@
         <title>בלוג מחשבות על קידוד ופיתוח</title>
         <link>https://blog.castnet.club/</link>
         <description>בלוג מחשבות על קידוד ופיתוח, התוכן באחריות קורא המחשבות</description>
-        <lastBuildDate>Thu, 22 Aug 2019 14:36:23 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Jun 2021 09:36:02 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <language>he</language>
@@ -13,19 +13,67 @@
             <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
             <link>https://blog.castnet.club/</link>
         </image>
-        <copyright>All rights reserved 2019, Haim Kastner</copyright>
+        <copyright>All rights reserved 2021, Haim Kastner</copyright>
         <category>software development</category>
         <item>
-            <title><![CDATA[ רקורסיית דמה ב-JS  ופתרונה עם async+await]]></title>
-            <link>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</link>
-            <guid>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</guid>
-            <description><![CDATA[ ביצוע קריאות אסינכרוניות בצורה סינכרונית, למה ואיך.]]></description>
+            <title><![CDATA[ 'שירות VPN אישי ופרטי בענן של AWS']]></title>
+            <link>https://blog.castnet.club/blog/private-vpn-on-aws</link>
+            <guid>https://blog.castnet.club/blog/private-vpn-on-aws</guid>
+            <description><![CDATA[ מדריך הפעלת שרת VPN פרטי על גבי הענן של AWS, צעד אחר צעד.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'PhotoPrism + Raspberry PI שרת תמונות ביתי בגרושים']]></title>
+            <link>https://blog.castnet.club/blog/photoprism-on-rsp</link>
+            <guid>https://blog.castnet.club/blog/photoprism-on-rsp</guid>
+            <description><![CDATA[  סקירה והוראות התקנה לאלטרנטיבה לגוגל תמונות, מאובטחת, בקוד פתוח ובשליטה אישית מלאה. חלק ב']]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'PhotoPrism]]></title>
+            <link>https://blog.castnet.club/blog/google-photos-alternative</link>
+            <guid>https://blog.castnet.club/blog/google-photos-alternative</guid>
+            <description><![CDATA[ סקירה והוראות התקנה לאלטרנטיבה לגוגל תמונות, מאובטחת, בקוד פתוח ובשליטה אישית מלאה. חלק א']]></description>
+        </item>
+        <item>
+            <title><![CDATA[ יחידות מידה ומערכות תכנה]]></title>
+            <link>https://blog.castnet.club/blog/units-in-system</link>
+            <guid>https://blog.castnet.club/blog/units-in-system</guid>
+            <description><![CDATA[ צורת עבודה נכונה עם יחידות מידה במערכות תכנה]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ פרוייקט ++C/C חוצה פלטפורמות]]></title>
+            <link>https://blog.castnet.club/blog/mulit-platform-cpp</link>
+            <guid>https://blog.castnet.club/blog/mulit-platform-cpp</guid>
+            <description><![CDATA[ הבנת תהליך בניית פרוייקט ++C/C משלב כתיבת הקוד ועד ההרצה והדיבאג בבסיס קוד אחד חוצה פלטפורמות]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ צריבת Tasmota  על Sonoff RF Bridge]]></title>
+            <link>https://blog.castnet.club/blog/flashing-tasmota-on-sonoff-rf-bridge</link>
+            <guid>https://blog.castnet.club/blog/flashing-tasmota-on-sonoff-rf-bridge</guid>
+            <description><![CDATA[ מדריך צריבת קושחת Tasmota על משדר\מקלט RF של Sonoff]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ משתני סביבה וצד-לקוח]]></title>
+            <link>https://blog.castnet.club/blog/environments-variables-and-frontend</link>
+            <guid>https://blog.castnet.club/blog/environments-variables-and-frontend</guid>
+            <description><![CDATA[ 'משתני סביבה]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ צריבת Tasmota  על Tuya IR bridge]]></title>
+            <link>https://blog.castnet.club/blog/flashing-tasmota-on-tuya-ir-bridge</link>
+            <guid>https://blog.castnet.club/blog/flashing-tasmota-on-tuya-ir-bridge</guid>
+            <description><![CDATA[ מדריך צריבת קושחת Tasmota על משדר\מקלט IR של Tuya]]></description>
         </item>
         <item>
             <title><![CDATA[ כדור הארץ, קואורדינטות במרחב ומה שביניהם]]></title>
             <link>https://blog.castnet.club/blog/earth-coordinates-and-spatial-data</link>
             <guid>https://blog.castnet.club/blog/earth-coordinates-and-spatial-data</guid>
-            <description><![CDATA[ אינפורמציה קלה, על קצה המזלג, על עולם קואורדינטות כדור-הארץ ותיאור מיקומים ויחס בין יקומים מנקודת מבט של מפתח למערכות GIS. ]]></description>
+            <description><![CDATA[ אינפורמציה קלה על קצה המזלג על עולם קואורדינטות כדור-הארץ, תיאור מיקומים ויחס בין מיקומים, מנקודת המבט של מפתח מערכות GIS.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ רקורסיית דמה ב-JS  ופתרונה עם async+await]]></title>
+            <link>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</link>
+            <guid>https://blog.castnet.club/blog/dummy-recursion-in-js-and-its-solution-with-async-await</guid>
+            <description><![CDATA[ ביצוע קריאות אסינכרוניות בצורה סינכרונית, למה ואיך.]]></description>
         </item>
     </channel>
 </rss>

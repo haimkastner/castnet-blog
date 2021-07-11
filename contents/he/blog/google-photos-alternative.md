@@ -309,6 +309,8 @@ pause
 
 <br>
 
+> [PhotoPrism על רספברי-פיי חלק ב'](/blog/photoprism-on-rsp)
+
 ---
 
 <br>

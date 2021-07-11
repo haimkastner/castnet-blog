@@ -1,4 +1,4 @@
-# Forked from https://github.com/marinaaisa/nuxt-markdown-blog-starter
+# Forked from https://github.com/marinaaisa/casanet-blog
 
 <p align="center">
   <a href="https://nuxtjs.org/">
@@ -8,22 +8,22 @@
   <img src="https://geekytheory.com/wp-content/uploads/2014/03/markdown_inte-1024x630.png" height="60">
 </p>
 <h1 align="center">
-  Nuxt + Markdown blog starter
+  Nuxt + Markdown blog
 </h1>
 <p align="center">
-  This is not an official project. It's made by <a href="https://marinaaisa.com/">Marina Aísa</a> and you can contribute submitting a pull-request.
+  This blog structure is based on <a href="https://marinaaisa.com/">Marina Aísa</a> project.
   </a>
 </p>
 
 ## ⚡️ Live
-[Check it live](https://nuxt-markdown-blog-starter.netlify.com/)
+[Check it live](https://blog.castnet.club/)
 
 ## ✨ Quick start
 
 1.  **Clone this repository.**
 
     ```sh
-    git clone https://github.com/marinaaisa/nuxt-markdown-blog-starter.git
+    git clone https://github.com/haimkastner/castnet-blog.git
     ```
 
 2.  **Start developing.**
@@ -31,8 +31,8 @@
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd nuxt-markdown-blog-starter/
-    npm install
+    cd casanet-blog
+    yarn
     npm run dev
     ```
 
@@ -89,7 +89,7 @@
 
 12. **`nuxt-config.js`**: This is the main configuration file for a Nuxt site. This is where you can specify information about your site (metadata) like the site title and description, which Nuxt plugins you’d like to include, etc. (Check out the [config docs](https://nuxtjs.org/guide/configuration) for more detail).
 
-13. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+13. **`yarn.lock`** (See `yarn.lock` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
 14. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
@@ -99,7 +99,7 @@
 
 Set `ANALYTICS_ID` environment variable to use google analytics.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marinaaisa/nuxt-markdown-blog-starter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/haimkastner/castnet-blog)
 
 ## Comments system
 The comments system is using [vssue](https://vssue.js.org/) solution.

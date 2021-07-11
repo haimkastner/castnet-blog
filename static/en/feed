@@ -4,7 +4,7 @@
         <title>Coding and Development Thoughts Blog</title>
         <link>https://blog.castnet.club/en</link>
         <description>Coding and Development Thoughts Blog, The Content is on the responsibility of the mind reader</description>
-        <lastBuildDate>Thu, 22 Aug 2019 14:36:23 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Jun 2021 09:36:02 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <language>en</language>
@@ -13,8 +13,26 @@
             <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
             <link>https://blog.castnet.club/en</link>
         </image>
-        <copyright>All rights reserved 2019, Haim Kastner</copyright>
+        <copyright>All rights reserved 2021, Haim Kastner</copyright>
         <category>software development</category>
+        <item>
+            <title><![CDATA[ 'Private VPN server on AWS Cloud']]></title>
+            <link>https://blog.castnet.club/en/blog/private-vpn-on-aws</link>
+            <guid>https://blog.castnet.club/en/blog/private-vpn-on-aws</guid>
+            <description><![CDATA[ Step by step manual to configure private and secure VPN server on AWS cloud]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ Flashing Tasmota on Sonoff RF bridge]]></title>
+            <link>https://blog.castnet.club/en/blog/flashing-tasmota-on-sonoff-rf-bridge</link>
+            <guid>https://blog.castnet.club/en/blog/flashing-tasmota-on-sonoff-rf-bridge</guid>
+            <description><![CDATA[ Flashing Tasmota firmware on Sonoff RF Trasmitter/Recevier manual]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ Flashing Tasmota on Tuya IR bridge]]></title>
+            <link>https://blog.castnet.club/en/blog/flashing-tasmota-on-tuya-ir-bridge</link>
+            <guid>https://blog.castnet.club/en/blog/flashing-tasmota-on-tuya-ir-bridge</guid>
+            <description><![CDATA[ Flashing Tasmota firmware on Tuya IR Trasmitter/Recevier manual]]></description>
+        </item>
         <item>
             <title><![CDATA[ dummy recursion in js and its solution with async await]]></title>
             <link>https://blog.castnet.club/en/blog/dummy-recursion-in-js-and-its-solution-with-async-await</link>
