@@ -3,6 +3,7 @@ name: 'js-best-practices-config-unit-tests-part-c'
 title: 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת בדיקות יחידה'
 year: 10 ביולי 2021
 color: '#8e7964'
+trans: 'js-best-practices-config-unit-tests-part-c'
 id: 'js-best-practices-config-unit-tests-part-c'
 description:  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS – חלק ג' – הגדרת בדיקות יחידה
 ---
@@ -183,8 +184,8 @@ npm i --save-dev mocha-lcov-reporter nyc
  
 היי!!! אנחנו על 100 אחוז כיסוי  🥇🥇🥇
 
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.PNG" />
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.PNG" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.png" />
 
 
 > מה עוד אפשר לעשות עם הדו"ח הזה? 
