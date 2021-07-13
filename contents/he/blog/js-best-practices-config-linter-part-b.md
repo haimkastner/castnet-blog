@@ -3,6 +3,7 @@ name: 'js-best-practices-config-linter-part-b'
 title: 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת לינטר'
 year: 10 ביולי 2021
 color: '#8e7964'
+trans: 'js-best-practices-config-linter-part-b'
 id: 'js-best-practices-config-linter-part-b'
 description:  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS – חלק ב' – הגדרת לינטר
 ---
