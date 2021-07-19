@@ -87,14 +87,14 @@ jobs: # The jobs collection to run
 
 After this will be pushed to GitHub, navigate to the `Actions` tab in the GitHub web-UI.
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-1.jpg" />
 <br>
-<image-responsive class="" imageURL="blog/js-best-practices-config-ci-part-d/actions-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-2.jpg" />
 <br>
 
 When the job will finish, you will be able to see and download the new artifact assets. (It's also accessible using GitHub API) 
 
-<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/actions-3.jpg" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-3.jpg" />
 <br>
 
 Nice, right?
@@ -103,7 +103,7 @@ Now let use the ability to generate a test coverage report to get a beautiful an
 
 For that, log in to [coveralls.io](https://coveralls.io/) service using the GitHub account, and connect the project repository to coveralls.
 
-<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.png" />
+<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.jpg" />
 
 Back to the `prj_ci.yml`  file, change the test command from `npm run test` to `npm run cover` so the report data will be generated during the test.
 
@@ -153,7 +153,7 @@ Await to the test job to be done, then you can see the new dashboard info on Cov
 For the example project it will be this URL:
 [https://coveralls.io/github/haimkastner/js-project-best-practice](https://coveralls.io/github/haimkastner/js-project-best-practice)
 
-<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/coveralls-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-2.jpg" />
 
 <br>
 
@@ -196,7 +196,7 @@ The articles about it is available in [blog.castnet](https://blog.castnet.club/b
 
 Push it to GitHub then you can see the budges displayed
 
-<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/readme-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/readme-1.jpg" />
 <br>
 
 

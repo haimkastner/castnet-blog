@@ -163,8 +163,8 @@ Run the `npm run cover` command, then you can see a new folder named `.nyc_outpu
 As you can see, we are on the 100% coverage 🥇🥇🥇
  
 
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.png" />
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.jpg" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.jpg" />
 
 
 > What else can we do with this report?
