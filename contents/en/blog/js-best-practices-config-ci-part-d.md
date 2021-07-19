@@ -34,9 +34,9 @@ This file defined to GitHub a collection of jobs to run.
 
 Using those jobs we are able to run any command, usually, it's used to run linter test, etc.
 
-This configuration file allows to defined auto-run jobs manually run jobs, a job for a specific branch, and so on.
+This configuration file allows to define auto-run jobs manually run jobs, a job for a specific branch, and so on.
 
-Currently, we will define for example a very simple job, a test job to verify the lint and the tests, and a building job to build and then upload the dist to the GitHub artifiactory.
+Let's define for the example a very simple job, a test job to verify the lint and the tests, and a building job to build and then upload the dist to the GitHub artifiactory.
 
 This is how the file will look like (notice the comments in it)
 ```yaml

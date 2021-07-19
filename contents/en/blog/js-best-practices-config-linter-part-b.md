@@ -90,7 +90,7 @@ After run it, probably the following error will appear:
 
 This means there is a lint rule that each TS file should has a `export default` but there is no one in the `index.ts` file.
 
-But... of we do want to not use `export default`, what can we do?
+But... if we do want to not use `export default`, what can we do?
 
 In the `.eslintrc.js` file under the `rules` section add the following line:
 ```
@@ -102,7 +102,7 @@ Run again the `npm run lint` command and... the problem is gone.
 
 This how you can set manually the rule setting with `off` \ `warn` \ `error`, of curse, override the default rule very carefully.
 
-To more complex changes see the [ESLint documentation](https://eslint.org/docs/user-guide/configuring/configuration-files#using-configuration-files).
+To more info and complex changes see the [ESLint documentation](https://eslint.org/docs/user-guide/configuring/configuration-files#using-configuration-files).
 
 If you're using the VSCode IDE it's recommended to install the ESLint extension (pay attention to restart the VSCode after Lint configuration change)
 
