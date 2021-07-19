@@ -103,7 +103,7 @@ Now let use the ability to generate a test coverage report to get a beautiful an
 
 For that, log in to [coveralls.io](https://coveralls.io/) service using the GitHub account, and connect the project repository to coveralls.
 
-<image-responsive class="center" imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.jpg" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.jpg" />
 
 Back to the `prj_ci.yml`  file, change the test command from `npm run test` to `npm run cover` so the report data will be generated during the test.
 
