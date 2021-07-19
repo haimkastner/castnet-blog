@@ -117,15 +117,15 @@ jobs: # The jobs collection to run
  Actions בממשק הוובי של GitHub
 ולראות את התקדמות התהליך
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-1.jpg" />
 <br>
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-2.jpg" />
 <br>
 
 ובסיומו אם הכל הצליח נוכל לראות את הארטיפקט החדש ולהוריד אותו
 (כמובן אפשר גם עם GitHub API)
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-3.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/actions-3.jpg" />
 <br>
 
 
@@ -140,7 +140,7 @@ jobs: # The jobs collection to run
 
 ניתן להם גישה לריפוסיטורי אותו אנו מעוניין להציג
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-1.jpg" />
 
 נחזור לקובץ ה-`prj_ci.yml` 
 ונשנה את הטסט במקום להריץ
@@ -199,7 +199,7 @@ jobs: # The jobs collection to run
  ה-URL הבא
 [https://coveralls.io/github/haimkastner/js-project-best-practice](https://coveralls.io/github/haimkastner/js-project-best-practice)
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/coveralls-2.jpg" />
 
 <br>
 
@@ -249,7 +249,7 @@ The articles about it is available in [blog.castnet](https://blog.castnet.club/b
 נדחוף את הקובץ ל-GitHub
  ועכשיו נוכל לראות את הבדג'טים מוצגים
 
-<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/readme-1.png" />
+<image-responsive imageURL="blog/js-best-practices-config-ci-part-d/readme-1.jpg" />
 <br>
 
 

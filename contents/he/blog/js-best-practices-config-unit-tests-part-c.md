@@ -184,8 +184,8 @@ npm i --save-dev mocha-lcov-reporter nyc
  
 היי!!! אנחנו על 100 אחוז כיסוי  🥇🥇🥇
 
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.png" />
-<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.png" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-1.jpg" />
+<image-responsive imageURL="blog/js-best-practices-config-unit-tests-part-c/cover-report-2.jpg" />
 
 
 > מה עוד אפשר לעשות עם הדו"ח הזה? 
