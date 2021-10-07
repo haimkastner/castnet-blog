@@ -20,7 +20,7 @@ description: Flashing Tasmota firmware on Tuya IR Trasmitter/Recevier manual
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/device-1.jpg"  alt="Device"/>
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/device-2.jpg"  alt="Device"/>
 <image-responsive class="center" imageURL="blog/flashing-tuya-ir/device-3.jpg"  alt="Device"/>
-<image-responsive class="center" imageURL="blog/flashing-tuya-ir/device-4.gif"  alt="Device"/>
+<image-responsive class="center" imageURL="blog/flashing-tuya-ir/device-4.jpg"  alt="Device"/>
 
 
 ## Flashing equipment

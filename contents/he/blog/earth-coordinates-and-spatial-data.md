@@ -107,7 +107,7 @@ description: אינפורמציה קלה על קצה המזלג על עולם ק
 
 איור חלוקת פני כדור הארץ לזוויות:
 
-<image-responsive class="center" imageURL="blog/earth-coordinates/full_earth_lat_lon.gif"  alt="Full earth lan lon angels"/>
+<image-responsive class="center" imageURL="blog/earth-coordinates/full_earth_lat_lon.jpg"  alt="Full earth lan lon angels"/>
 
 [קרדיט](https://thesocialsciencesblogger.blogspot.com/2013/09/geographic-coordinates-quiz.html)
 
@@ -182,7 +182,7 @@ https://www.google.co.il/maps/place/32°48'37.4"N+35°00'47.0"E/
 זווית בציר האופקי (בדו ממדי) בין שתי נקודות במרחב הדו ממדי (גם במרחב תלת ממדי מתייחסים לזווית הדו ממדית)
 
 איור להדגמת ההבדל בין זווית ה-`Elevation` לזווית ה-`Azimuth`:
-<image-responsive class="center" imageURL="blog/earth-coordinates/azimuth_elevation.gif"  alt="Azimuth vs Elevation angle"/>
+<image-responsive class="center" imageURL="blog/earth-coordinates/azimuth_elevation.jpg"  alt="Azimuth vs Elevation angle"/>
 
 [קרדיט](http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/visualize/chview3.html)
 
@@ -196,19 +196,19 @@ https://www.google.co.il/maps/place/32°48'37.4"N+35°00'47.0"E/
 
 #### heading \ yaw (סבסוב)
 
-<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_yaw.gif"  alt="Airplane yaw animation"/>
+<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_yaw.jpg"  alt="Airplane yaw animation"/>
 
 [קרדיט](https://commons.wikimedia.org/wiki/File:Aileron_yaw.gif)
 
 #### Pitch (עילרוד)
 
-<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_pitch.gif"  alt="Airplane pitch animation"/>
+<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_pitch.jpg"  alt="Airplane pitch animation"/>
 
 [קרדיט](https://commons.wikimedia.org/wiki/File:Aileron_pitch.gif)
 
 #### Roll (גלגול)
 
-<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_roll.gif"  alt="Airplane roll animation"/>
+<image-responsive class="center" imageURL="blog/earth-coordinates/aileron_roll.jpg"  alt="Airplane roll animation"/>
 
 [קרדיט](https://commons.wikimedia.org/wiki/File:Aileron_roll.gif)
 
