@@ -20,7 +20,7 @@ description: Build API server fast and get API spec, documentation and consumer 
 <br>
 <br>
 
- API schemas, interfaces and calls implementation perspective, it probably will be to write API once, then get for free, API calls validation on API server, full OpenAPI spec that allows publishing API, generate client facade and import schemas without code duplication and much more.
+ A perfect API Server could be a lot of things, but from the API and the interfaces implementation perspective, it probably will be to write API once, then get for free, API calls validation on API server, full OpenAPI spec that allows publishing API, generate client facade and import schemas without code duplication and much more.
 
 This article will teach how to do it easily on the Node.JS platform.
 
@@ -32,9 +32,9 @@ First, make sure [Node.Js](https://nodejs.org/en/about/) as well as [NPM](https:
 
 Once NPM is ready, is recommended to install [yarn](https://yarnpkg.com/) as this is the dependency manager in this article, by `npm -i -g yarn` command.
 
-Also, install [TypeScript](https://www.typescriptlang.org/) globally in order to use it as in the project by the `npm -i -g typescript` command.
+Also, install [TypeScript](https://www.typescriptlang.org/) globally in order to use it in the project by the `npm -i -g typescript` command.
 
-Create an empty folder and open the command-line/terminal in the folder directory.
+Create an empty folder and open the command-line/terminal in the new created folder directory.
 
 Run `npm init` to create an empty JS project.
 
@@ -102,7 +102,7 @@ Go to the `package.json` file, in the scripts section add the following scripts:
 
 Now the server is ready, run the `yarn build` & `yarn start` and the server is up and running!
 ```
-Example app listening at http://localhost:8081
+Example app listening at http://localhost:8080
 ```
 
 As default it's on port 8080, to modify it, set `PORT` environment variable, or create a `.env` file with the following content:
@@ -111,7 +111,7 @@ As default it's on port 8080, to modify it, set `PORT` environment variable, or 
 PORT="8080"
 ```
 
-Stop and rebuild and start again, you the server runs on the new port 8081
+Stop and rebuild and start again, you the server runs on the new port 8080
  
 ### Set Up TSOA
 
