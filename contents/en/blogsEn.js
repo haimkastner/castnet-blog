@@ -1,4 +1,5 @@
 export default [
+	'perfect-api-server-part-b',
 	'perfect-api-server-part-a',
 	'js-best-practices-config-ci-part-d',
   'js-best-practices-config-unit-tests-part-c',
