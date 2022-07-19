@@ -20,11 +20,17 @@ description: Build API server fast and get API spec, documentation and consumer 
 <br>
 <br>
 
- A perfect API Server could be a lot of things, but from the API and the interfaces implementation perspective, it probably will be to write API once, then get for free, API calls validation on API server, full OpenAPI spec that allows publishing API, generate client facade and import schemas without code duplication and much more.
+Consider you are about to implement a new API server, you need to... 
+- Implement the API server, including the data schemas going to be used.
+- Implement schemas validation to make sure a payload arrived as expected.
+- Write some documentation, and describe all available APIs and objects.
+- Write all data schemas again, as duplication, in the application that going to consume this API.
+
+What if... you can write API once, then, get for free, API schema validation on the API server, full OpenAPI spec that also allows publishing API, generating client facade and import schemas, and much more, it will be a perfect API server, isn't it?
 
 This article will teach how to do it easily on the Node.JS platform.
 
-This step-by-step manual is for starting a project from scratch, but the setting can be mode on an already existing project and will not require many changes to adjust to being a perfect API Server 😎
+This step-by-step manual is for starting a project from scratch, but the setting can be made on an already existing project and will not require many changes to adjust to being a perfect API Server 😎
 
 ### Set Up Node.JS + TypeScript Project
 
@@ -53,7 +59,7 @@ Open the folder directory in your favorite IDE, such as [VS Code](https://code.v
 
 Create `src` directory on the root of the project, where the code will be stored.
 
-Within `src` directory create a new file named `app.ts` and fill it with the must simple express app:
+Within `src` directory create a new file named `app.ts` and fill it with the most simple express app:
 
 ```typescript
 
@@ -78,7 +84,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// Use passed PROT or as default 8080
+// Use passed PORT or as default 8080
 const port = process.env.PORT || 8080;
 
 // Start listening to requests
@@ -175,7 +181,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// Register TSOA generated API routes
+// Register TSOA generated API routes - *AFTER* payload parsed
 RegisterRoutes(app);
 
 // Use passed PROT or as default 8080
@@ -237,7 +243,7 @@ Build the project again and with the `src/generated` directory new 2 files will 
 * `routes.ts` The generated express routes with validation as declared in the controller.
 * `swagger.json` The OpenAPI (swagger) spec generated from the API controllers.
 
-To make it easy to explorer the generated spec and trigger calls, let's add an route to serve the spec using [swagger-ui]()
+To make it easy to explorer the generated spec and trigger calls, let's add an route to serve the spec using [swagger-ui](https://swagger.io/tools/swagger-ui/)
 
 Add the swagger-ui dependency by `yarn add swagger-ui-express && yarn add -D @types/swagger-ui-express`.
 
@@ -299,6 +305,9 @@ app.listen(port, () =>
 
 Build server and start it again, open any browser and navigate to [`http://localhost:8080`](http://localhost:8080) or the port set to be listed to, and explore the API spec.
 
+<image-responsive class="center" imageURL="blog/perfect-api-server-part-a/local-spec.jpg"  alt="local spec"/>
+
+
 ### Build & Host Server on Heroku
 
 The app can be deployed to any hosting service that supports Node.JS apps.
@@ -314,6 +323,8 @@ Now all needs are to upload the source code to Heroku, the simplest way is to cr
 
 [Apps](https://dashboard.heroku.com/apps)->Select/Create Application->Deploy->Deployment Method.
 
+<image-responsive class="center" imageURL="blog/perfect-api-server-part-a/heroku.jpg"  alt="heroku set up"/>
+
 
 ### Publish Spec
 
@@ -325,11 +336,13 @@ But it's also possible to upload the API Spec to Swagger Hub where all other API
 
 Open an account or login to [swaggerhub.com](https://app.swaggerhub.com/home) than in the top right corner click on the username and select `API Key` in the new view, and click on `Copy API Key`, will need it later to upload the spec.
 
+> *PAY ATTENTION* - This API Key is highly sensitive, please make sure you giving it only to who you're fully trust.
+
 Back to the code, let's use GitHub Actions for the build and publish.
 
 Create the directory `.github/workflows` in the project's root, and within it create a new file named `actions.yml`.
 
-In this file add the build & the spec publish, see an empale for it: (read the comments 👀)
+In this file add the build & the spec publish, see an example for it: (read the comments 👀)
 ```yml
 
 name: node-api-spec-boilerplate # The deployment/action name
@@ -349,7 +362,7 @@ jobs:
       uses: actions/setup-node@v1 # Install Node.JS with the predefined selected versions, using official actions/setup-node@v1 package
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Update version - patch # Since publishing API to swagger required increasing version, in case it's main branch (only) bomb patch version
+    - name: Update version - patch # Update API Server version on main branch update - SwaggerHub is not allows to override published API spec, we have to increase version before publishing a new API spec
       if: github.ref == 'refs/heads/main'
       id: update_version
       run: | # Use NPM to patch version, then keep the new version in the step's context 
@@ -376,7 +389,7 @@ jobs:
         SWAGGERHUB_API_KEY: '${{ secrets.SWAGGERHUB_API_KEY }}' # Export the SWAGGERHUB_API_KEY secret as environment variable, use to auth publish request
         API_SERVER_URL: '${{ secrets.API_SERVER_URL }}' # Export the API_SERVER_URL secret as environment variable, used to set the API Server URL to the published spec.
       if: github.ref == 'refs/heads/main'
-      run: | # Update the spec with the API Server URL, then publish the new ready to publish spec 
+      run: | # Update the spec with the API Server URL, then publish the new ready to publish spec ***PAY ATTENTION*** this will publish the API spec to the entire world!!! if you don't want it, change the published and visibility param.
         node ./scripts/set-spec-server.js dist/generated/swagger.json $API_SERVER_URL
         npx swaggerhub-cli api:create haimkastner/node-api-spec-boilerplate --file dist/generated/swagger.json --published=publish --visibility=public --setdefault
 ```
@@ -386,6 +399,11 @@ Just before pushing code to GitHub, set up the required secret to add it, naviga
 `Repo->Settings->Secrets->Actions->New repository secret`
 
 Add the `SWAGGERHUB_API_KEY` secret and as value paste the copied swagger bug API Key, and add the `API_SERVER_URL` optional secret if there is API Server URL spec need to point to.
+
+Push project to GitHub, await to the Actions to be done, and the API spec should be appear on the [swaggerhub](https://app.swaggerhub.com/apis/haimkastner/node-api-spec-boilerplate).
+
+<image-responsive class="center" imageURL="blog/perfect-api-server-part-a/published-spec.jpg"  alt="published spec"/>
+
 
 ### Conclusion
 
