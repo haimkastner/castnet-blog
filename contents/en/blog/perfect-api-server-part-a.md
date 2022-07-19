@@ -24,7 +24,8 @@ Consider you are about to implement a new API server, you need to...
 - Implement the API server, including the data schemas going to be used.
 - Implement schemas validation to make sure a payload arrived as expected.
 - Write some documentation, and describe all available APIs and objects.
-- Write all data schemas again, as duplication, in the application that going to consume this API.
+- Write all data schemas again, as duplication, in the client application that going to consume this API.
+- Now, what if you'd like to, say, add an API? or perhaps extend the payload of an existing one? Well, now you have to change the documentation, validation, schema and the client application, again, and again 😱😱😱
 
 What if... you can write API once, then, get for free, API schema validation on the API server, full OpenAPI spec that also allows publishing API, generating client facade and import schemas, and much more, it will be a perfect API server, isn't it?
 
