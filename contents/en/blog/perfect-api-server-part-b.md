@@ -162,6 +162,8 @@ const SPEC_FILE_DEST_DIR = path.join('src/generated');
 
 async function downloadSpec() {
 
+    console.log(`[fetch-api] Fetching API spec form git...`);
+
     // Download the swagger API spec from the API server CI latest artifact https://github.com/haimkastner/node-api-spec-boilerplate/actions/workflows/actions.yml
     // Using https://nightly.link/ for download latest build dist
     const latestArtifact = await nodeFetch(`https://nightly.link/${API_SPEC_OWNER}/${API_SPEC_NAME}/workflows/actions/${API_SERVER_SPEC_BRANCH}/swagger-spec.zip`);
@@ -169,16 +171,16 @@ async function downloadSpec() {
     // Get res buffer data
     const artifactBuffer = await latestArtifact.arrayBuffer();
 
-    // Load buffer it as a zip 
+    // Load buffer as a zip archive
     const artifactZip = await jsZip.loadAsync(artifactBuffer);
 
-    // Fet the archived spec file
+    // Fetch the archived spec file
     const archivedSpecFile = artifactZip.file(SPEC_FILE_NAME);
 
     // Extract file content as buffer
     const fileBuffer = await archivedSpecFile.async('nodebuffer');
 
-    // Build the s file full path
+    // Build the file full path
     const fileDist = path.join(SPEC_FILE_DEST_DIR, SPEC_FILE_NAME);
 
     console.log(`[fetch-api] Saving API Spec to "${fileDist}"`);
@@ -299,6 +301,14 @@ Once the fetch script is ready, go the the `package.json` file on the *project's
 ```
 
 Then run `yarn fetch-spec` once a spec file named `swagger.json` should appear on the `src/generated` directory.
+
+Here as well, if don't yet exist a `.gitignore` file, don't forget to create it on the project's root, with the following file & directories to exclude:
+```
+
+generated/
+.env
+node_modules/
+```
 
 ## Generate API Facade
 

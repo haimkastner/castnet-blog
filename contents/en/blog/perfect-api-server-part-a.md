@@ -148,7 +148,15 @@ Within it configure the project entry point, the controllers directory, routes a
     }
 }
 ```
-If you dont have yet a `.gitignore` file, create it, and add the `/gnerated` `node_modules`
+
+In case don't yet exists a `.gitignore` file, create it on the project's root, with the following file & directories to exclude:
+```
+
+generated/
+.env
+node_modules/
+```
+
 In the `package.json` scripts modify the build command to:
 ```
 "build": "tsoa spec-and-routes && tsc",
