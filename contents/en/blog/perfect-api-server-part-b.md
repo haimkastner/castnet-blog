@@ -44,7 +44,7 @@ There are several options for how to fetch spec, depending on the needs and the 
 - `Fetch from Swagger Hub` - once a spec is published to SwaggerHub there is an easy-to-use API to fetch it, but this way will limit the fetch process to only the latest published spec.
 
 
-- `Fetch from GitHub Actions Artifact` - once a commit is pushed to GitHub a new actions job to upload spec to GitHab's artifactory triggered, adn few seconds later available to fetch by branch, but this option is a bit more complicated and required more maintenance.
+- `Fetch from GitHub Actions Artifact` - once a commit is pushed to GitHub a new actions job to upload spec to GitHab's artifactory triggered, ann a few seconds later available to be fetched by branch, but this option is a bit more complicated and required more maintenance.
 
 Whenever decided to go with one of the options, open the project directory in your favorite IDE, and create a folder named `scripts` in the project's root.
 
@@ -56,7 +56,7 @@ Within the `scripts` folder create a file named `package.json` and fill it with 
     "type": "module"
 }
 ```
-This configuration required in order to use the `import ... from "..."` syntax in JS scripts on this directory.
+This configuration is required in order to use the `import ... from "..."` syntax in JS scripts on this directory.
 
 Create a new file `fetch-spec.js` in this file needs to be the JS script code that fetches spec and places it at the `src/generated` directory.
 
