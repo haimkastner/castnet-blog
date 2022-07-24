@@ -33,7 +33,7 @@ This article will teach how to do it easily on the Node.JS platform.
 
 This step-by-step manual is for starting a project from scratch, but the setting can be made on an already existing project and will not require many changes to adjust to being a perfect API Server 😎
 
-### Set Up Node.JS + TypeScript Project
+## Set Up Node.JS + TypeScript Project
 
 First, make sure [Node.Js](https://nodejs.org/en/about/) as well as [NPM](https://docs.npmjs.com/about-npm) installed on the machine, if not [install both](https://nodejs.org/en/download/).
 
@@ -120,7 +120,7 @@ PORT="8080"
 
 Stop and rebuild and start again, you the server runs on the new port 8080
  
-### Set Up TSOA
+## Set Up TSOA
 
 To the fun part, adding the API controllers!
 
@@ -147,6 +147,14 @@ Within it configure the project entry point, the controllers directory, routes a
       "routesDir": "src/generated"
     }
 }
+```
+
+In case don't yet exists a `.gitignore` file, create it on the project's root, with the following file & directories to exclude:
+```
+
+generated/
+.env
+node_modules/
 ```
 
 In the `package.json` scripts modify the build command to:
@@ -309,7 +317,7 @@ Build server and start it again, open any browser and navigate to [`http://local
 <image-responsive class="center" imageURL="blog/perfect-api-server-part-a/local-spec.jpg"  alt="local spec"/>
 
 
-### Build & Host Server on Heroku
+## Build & Host Server on Heroku
 
 The app can be deployed to any hosting service that supports Node.JS apps.
 
@@ -327,7 +335,7 @@ Now all needs are to upload the source code to Heroku, the simplest way is to cr
 <image-responsive class="center" imageURL="blog/perfect-api-server-part-a/heroku.jpg"  alt="heroku set up"/>
 
 
-### Publish Spec
+## Publish Spec
 
 Finally, after all is set and ready need to... publish API!
 
@@ -406,7 +414,7 @@ Push project to GitHub, await to the Actions to be done, and the API spec should
 <image-responsive class="center" imageURL="blog/perfect-api-server-part-a/published-spec.jpg"  alt="published spec"/>
 
 
-### Conclusion
+## Conclusion
 
 This article is only a start of what can be done once API generated into an OpenAPI spec including E2E testing, API mocks and much more, in the next article, part II will be of how to auto-generate front facade from the published spec.
 
