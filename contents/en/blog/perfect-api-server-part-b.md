@@ -44,7 +44,7 @@ There are several options for how to fetch spec, depending on the needs and the 
 - `Fetch from Swagger Hub` - once a spec is published to SwaggerHub there is an easy-to-use API to fetch it, but this way will limit the fetch process to only the latest published spec.
 
 
-- `Fetch from GitHub Actions Artifact` - once a commit is pushed to GitHub a new actions job to upload spec to GitHab's artifactory, but this option is a bit more complicated and required more maintenance.
+- `Fetch from GitHub Actions Artifact` - once a commit is pushed to GitHub a new actions job to upload spec to GitHab's artifactory triggered, adn few seconds later available to fetch by branch, but this option is a bit more complicated and required more maintenance.
 
 Whenever decided to go with one of the options, open the project directory in your favorite IDE, and create a folder named `scripts` in the project's root.
 
@@ -56,7 +56,7 @@ Within the `scripts` folder create a file named `package.json` and fill it with 
     "type": "module"
 }
 ```
-This configuration needs in order to use the `import ... from "..."` syntax in JS scripts on this directory.
+This configuration required in order to use the `import ... from "..."` syntax in JS scripts on this directory.
 
 Create a new file `fetch-spec.js` in this file needs to be the JS script code that fetches spec and places it at the `src/generated` directory.
 
@@ -123,7 +123,7 @@ async function downloadSpec() {
 ```
 
 Prefer to fetch directly from GitHub Actions artifactory? 
-It seems reasonable, to fetch directly from the job build and save the 3rd party CDN such as swaggerHub, and of course, it should give the ability to run on a side-branch and build API on the latest build of each branch, so all sounds great... but GitHub doesn't have yet such public API to get latest artifactory by branch name 😒  
+It seems reasonable, to fetch directly from the job build and skip the 3rd party CDN such as swaggerHub, and of course, it should give the ability to run on a side-branch and build API on the latest build of each branch, so all sounds great... but GitHub doesn't have yet such public API to get latest artifactory by branch name 😒  
 
 Lucky us, superiorly there is a solution for it 😊
 
@@ -198,9 +198,9 @@ async function downloadSpec() {
 })();
 ```
 
-Let's also allow just copy spec file from any place on the machine, this is usefully on a local development machine, where working on the API server and the front application are combined.
+Let's also allow just copy spec file from any place on the machine, this is usefully on a local development machine, where working on the API server and the front application combined.
 
-See this bunch of code, if an `API_SERVER_SPEC_PATH` environment variable has been set, the file just will be copied and that's it.
+See this piece of code, if an `API_SERVER_SPEC_PATH` environment variable has been set, the file just will be copied and that's it.
 
 ```typescript
 
@@ -621,7 +621,7 @@ Scroll down, click on `Deploy site`, and let Netlify do their magic.
 
 ## Conclusion
 
-This article is only a brief taste of what can be done with the API template and the power that it gives to the developers, to be agile with the API change and interfaces, and make a fancy tool easily, just start to think about adding a lazy-loading cache mechanism, unique ID to each request header, logging, telemetry, and muck much more. it's truly a powerful tool. 
+This article is only a brief taste of what can be done with the API template and the power that it gives to the developers, to be agile with the API changes and interfaces, and make a fancy tool easily, just start to think about adding a lazy-loading cache mechanism, unique ID to each request header, logging, telemetry, and muck much more. it's truly a powerful tool. 
 
 Feel free to explorer the full example source-code [react-typescript-spec-facade](https://github.com/haimkastner/react-typescript-spec-facade).
 
