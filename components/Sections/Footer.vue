@@ -9,6 +9,10 @@
           <br />
           <span>
             |
+            <a target="_blank" href="https://tooot.im/@haimkastner" class="ani">
+              <span>Mastodon</span>
+            </a>
+            |
             <a target="_blank" href="https://github.com/haimkastner" class="ani">
               <span>GitHub</span>
             </a>
@@ -25,16 +29,6 @@
               <span>RSS</span>
             </a>
             |
-          </span>
-          <br />
-          <br />
-          <span>
-            Blog template based on the Marina Aisa
-            <a
-              target="_blank"
-              href="https://github.com/marinaaisa/nuxt-markdown-blog-starter"
-              class="ani"
-            >nuxt blog starter</a>
           </span>
         </div>
         <!-- <a href="#top" class="footer__top-page">

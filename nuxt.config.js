@@ -67,7 +67,7 @@ module.exports = {
     'normalize.css/normalize.css',
     '@/assets/css/main.scss'
   ],
-  plugins: ['~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
+  plugins: [{src: '~/plugins/vue-gtag', ssr: true, } , '~/plugins/lazyload', '~/plugins/globalComponents'],
   build: {
     extend(config) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
@@ -96,10 +96,7 @@ module.exports = {
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
     '@nuxtjs/feed',
-    ['nuxt-i18n', I18N],
-    ['@nuxtjs/google-analytics', {
-      id: process.env.ANALYTICS_ID || 'off'
-    }]
+    ['nuxt-i18n', I18N]
   ],
   feed: [
     {
