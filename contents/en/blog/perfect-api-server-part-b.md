@@ -11,9 +11,11 @@ description: Build API server fast and get API spec, documentation and consumer 
 ----
 > *Setting Up React Application With Generated API Facade*
 >
-> [Part I](/en/blog/perfect-api-server-part-a) – Setting Continues Integration (CI)
+> [Part I](/en/blog/perfect-api-server-part-a) – Setting Up Server
 >
 > <ins>[Part II](/en/blog/perfect-api-server-part-b) – Setting Up Front Facade <ins>
+>
+> [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
 >
 ----
 
@@ -632,4 +634,4 @@ Hope you enjoyed the article, and have fun with the OpenAPI echo system.
 
 ----
 
-Photo by <a href="https://burst.shopify.com/@aelis?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+The+Chrome+On+A+Black+Guitar+Captures+Sunlight&amp;utm_medium=referral&amp;utm_source=credit">Aelis Harris</a> from <a href="https://burst.shopify.com/guitar?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+The+Chrome+On+A+Black+Guitar+Captures+Sunlight&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
+Photo by <a href="https://burst.shopify.com/@aelis?utm_campaign=photo_credit&amp;utm_content=Free+Eyeshadow+Explosion+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit">Aelis Harris</a> from <a href="https://burst.shopify.com/beauty?utm_campaign=photo_credit&amp;utm_content=Free+Eyeshadow+Explosion+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

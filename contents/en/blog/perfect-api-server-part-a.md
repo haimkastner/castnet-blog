@@ -15,6 +15,8 @@ description: Build API server fast and get API spec, documentation and consumer 
 >
 > [Part II](/en/blog/perfect-api-server-part-b) – Setting Up Front Facade
 >
+> [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
+>
 ----
 
 <br>
@@ -428,4 +430,4 @@ Spec also published on [swaggerhub](https://app.swaggerhub.com/apis/haimkastner/
 
 ----
 
-Photo by <a href="https://burst.shopify.com/@lightleaksin?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Fiddle+And+Bow+On+Stack+Of+Books&amp;utm_medium=referral&amp;utm_source=credit">Samantha Hurley</a> from <a href="https://burst.shopify.com/musician?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Fiddle+And+Bow+On+Stack+Of+Books&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
+Photo by <a href="https://burst.shopify.com/@farah?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wooden+Craft+Table+Set+Up+For+Watercolors&amp;utm_medium=referral&amp;utm_source=credit">Farah</a> from <a href="https://burst.shopify.com/craft-diy?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wooden+Craft+Table+Set+Up+For+Watercolors&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
