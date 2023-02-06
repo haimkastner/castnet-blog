@@ -4,7 +4,7 @@
         <title>בלוג מחשבות על קידוד ופיתוח</title>
         <link>https://blog.castnet.club/</link>
         <description>בלוג מחשבות על קידוד ופיתוח, התוכן באחריות קורא המחשבות</description>
-        <lastBuildDate>Mon, 28 Jun 2021 09:36:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 28 Jan 2023 18:12:58 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <language>he</language>
@@ -13,8 +13,32 @@
             <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
             <link>https://blog.castnet.club/</link>
         </image>
-        <copyright>All rights reserved 2021, Haim Kastner</copyright>
+        <copyright>All rights reserved 2023, Haim Kastner</copyright>
         <category>software development</category>
+        <item>
+            <title><![CDATA[ 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת תהליך אינטגרציה אוטומטית']]></title>
+            <link>https://blog.castnet.club/blog/js-best-practices-config-ci-part-d</link>
+            <guid>https://blog.castnet.club/blog/js-best-practices-config-ci-part-d</guid>
+            <description><![CDATA[  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS – חלק ד' – הגדרת תהליך אינטגרציה אוטומטית]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת בדיקות יחידה']]></title>
+            <link>https://blog.castnet.club/blog/js-best-practices-config-unit-tests-part-c</link>
+            <guid>https://blog.castnet.club/blog/js-best-practices-config-unit-tests-part-c</guid>
+            <description><![CDATA[  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS – חלק ג' – הגדרת בדיקות יחידה]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת לינטר']]></title>
+            <link>https://blog.castnet.club/blog/js-best-practices-config-linter-part-b</link>
+            <guid>https://blog.castnet.club/blog/js-best-practices-config-linter-part-b</guid>
+            <description><![CDATA[  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS – חלק ב' – הגדרת לינטר]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'הגדרת סביבת פיתוח ל-Node.JS – הגדרת TypeScript']]></title>
+            <link>https://blog.castnet.club/blog/js-best-practices-config-ts-part-a</link>
+            <guid>https://blog.castnet.club/blog/js-best-practices-config-ts-part-a</guid>
+            <description><![CDATA[  מדריך הגדרת סביבת פרוייקט תקני ב-NODE.JS –  חלק א' -הגדרת TypesScript]]></description>
+        </item>
         <item>
             <title><![CDATA[ 'שירות VPN אישי ופרטי בענן של AWS']]></title>
             <link>https://blog.castnet.club/blog/private-vpn-on-aws</link>

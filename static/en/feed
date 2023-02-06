@@ -4,7 +4,7 @@
         <title>Coding and Development Thoughts Blog</title>
         <link>https://blog.castnet.club/en</link>
         <description>Coding and Development Thoughts Blog, The Content is on the responsibility of the mind reader</description>
-        <lastBuildDate>Mon, 28 Jun 2021 09:36:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 28 Jan 2023 18:12:58 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <language>en</language>
@@ -13,8 +13,50 @@
             <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
             <link>https://blog.castnet.club/en</link>
         </image>
-        <copyright>All rights reserved 2021, Haim Kastner</copyright>
+        <copyright>All rights reserved 2023, Haim Kastner</copyright>
         <category>software development</category>
+        <item>
+            <title><![CDATA[ 'Perfect API Server - Long processing via Rest API']]></title>
+            <link>https://blog.castnet.club/en/blog/perfect-api-server-part-c-jobs</link>
+            <guid>https://blog.castnet.club/en/blog/perfect-api-server-part-c-jobs</guid>
+            <description><![CDATA[ Build API server fast and get API spec, the right & easy way for asynchronous request processing via Rest API - Part III - Long processing via Rest API]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Perfect API Server - Generating Consumer API Facade']]></title>
+            <link>https://blog.castnet.club/en/blog/perfect-api-server-part-b</link>
+            <guid>https://blog.castnet.club/en/blog/perfect-api-server-part-b</guid>
+            <description><![CDATA[ Build API server fast and get API spec, documentation and consumer facade for free - Part II - Setting Up Front Facade]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Perfect API Server - Node.JS API Spec Boilerplate']]></title>
+            <link>https://blog.castnet.club/en/blog/perfect-api-server-part-a</link>
+            <guid>https://blog.castnet.club/en/blog/perfect-api-server-part-a</guid>
+            <description><![CDATA[ Build API server fast and get API spec, documentation and consumer facade for free - Part I - Setting Up Server]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Setting Up a Node.JS Development Environment - Setting Continues Integration (CI)']]></title>
+            <link>https://blog.castnet.club/en/blog/js-best-practices-config-ci-part-d</link>
+            <guid>https://blog.castnet.club/en/blog/js-best-practices-config-ci-part-d</guid>
+            <description><![CDATA[ A short manual to set up a standard Project Environment in NODE.JS - Part IV - Setting Continues Integration (CI)]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Setting Up a Node.JS Development Environment - Setting Unit-Tests']]></title>
+            <link>https://blog.castnet.club/en/blog/js-best-practices-config-unit-tests-part-c</link>
+            <guid>https://blog.castnet.club/en/blog/js-best-practices-config-unit-tests-part-c</guid>
+            <description><![CDATA[  A short manual to set up a standard Project Environment in NODE.JS - Part III - Setting Unit-Tests]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Setting Up a Node.JS Development Environment - Setting Linter']]></title>
+            <link>https://blog.castnet.club/en/blog/js-best-practices-config-linter-part-b</link>
+            <guid>https://blog.castnet.club/en/blog/js-best-practices-config-linter-part-b</guid>
+            <description><![CDATA[ A short manual to set up a standard Project Environment in NODE.JS - Part II - Setting Linter]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Setting Up a Node.JS Development Environment - Setting TypeScript']]></title>
+            <link>https://blog.castnet.club/en/blog/js-best-practices-config-ts-part-a</link>
+            <guid>https://blog.castnet.club/en/blog/js-best-practices-config-ts-part-a</guid>
+            <description><![CDATA[ A short manual to set up a standard Project Environment in NODE.JS - Part I - Setting TypeScript]]></description>
+        </item>
         <item>
             <title><![CDATA[ 'Private VPN server on AWS Cloud']]></title>
             <link>https://blog.castnet.club/en/blog/private-vpn-on-aws</link>
