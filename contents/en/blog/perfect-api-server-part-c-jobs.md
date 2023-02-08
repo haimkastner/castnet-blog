@@ -247,7 +247,7 @@ export async function jobify(request: any, controller: BaseController, method: (
     // Read the job flag header
     const jobFlag = request?.headers?.[JobFlagHeader] as JobFlag;
     if (jobFlag !== JobFlag.ON) {
-        // If it's not marked as a job, just run it with any additional logic.
+        // If it's not marked as a job, just run it without any additional logic.
         return method.apply(controller, args);
     }
     // Add the operation execution as a new job. 
