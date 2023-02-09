@@ -169,7 +169,7 @@ As you can see, we are on the 100% coverage 🥇🥇🥇
 
 > What else can we do with this report?
 >
-> In the [next article](/blog/js-best-practices-config-ci-part-d) will see how to build a full CI using all the tools we already integrated into the project and more.
+> In the [next article](/en/blog/js-best-practices-config-ci-part-d) will see how to build a full CI using all the tools we already integrated into the project and more.
 
 ----
 

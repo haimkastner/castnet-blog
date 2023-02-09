@@ -422,7 +422,8 @@ This article is only a start of what can be done once API generated into an Open
 
 Feel free to explorer the full example source-code [node-api-spec-boilerplate](https://github.com/haimkastner/node-api-spec-boilerplate).
 
-This repo integrated to Heroku served on [api-spec-boilerplate.herokuapp.com](https://api-spec-boilerplate.herokuapp.com/)
+~~This repo integrated to Heroku served on [api-spec-boilerplate.herokuapp.com](https://api-spec-boilerplate.herokuapp.com/)~~
+**Due to heroku's end-of-free plan, the example application moved to [node-api-spec-boilerplate.castnet.club](https://node-api-spec-boilerplate.castnet.club/)**
 
 Spec also published on [swaggerhub](https://app.swaggerhub.com/apis/haimkastner/node-api-spec-boilerplate)
 
