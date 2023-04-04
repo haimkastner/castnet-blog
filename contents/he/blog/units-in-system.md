@@ -4,8 +4,11 @@ title: יחידות מידה ומערכות תכנה
 year: 24 בדצמבר 2019
 color: '#8e7964'
 id: 'units-in-system'
+trans: 'units-in-system'
 description: צורת עבודה נכונה עם יחידות מידה במערכות תכנה
 ---
+
+> עודכן ב-4/4/2023
 
 ב-23 בספטמבר 1999 ניתק הקשר עם הגשושית 
 Mars Climate Orbiter.
@@ -140,6 +143,19 @@ JS/TS.
 
 
 <iframe height="400px" width="100%" src="https://repl.it/@HaimKastner/unitsnet-solution?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<br>
+<br>
+<br>
+
+
+ומרוב ההצלחה המסחררת (והצורך של הכותב גם בספרייה לפייתון)
+
+הספרייה זמינה עכשיו גם בפייתון!
+
+קוד המקור של הספרייה [unitsnet-py](https://github.com/haimkastner/unitsnet-py)
+
+והספרייה זמינה לשימוש ב-[https://pypi.org/project/unitsnet-py](https://pypi.org/project/unitsnet-py/)
 
 <br>
 
