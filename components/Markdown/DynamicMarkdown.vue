@@ -13,6 +13,7 @@
   import cs from 'highlight.js/lib/languages/cs'
   import yaml from 'highlight.js/lib/languages/yaml'
   import markdown from 'highlight.js/lib/languages/markdown'
+  import python from 'highlight.js/lib/languages/python'
 	
   hljs.registerLanguage('javascript', javascript)
   hljs.registerLanguage('js', javascript)
@@ -28,6 +29,7 @@
   hljs.registerLanguage('cs', cs)
   hljs.registerLanguage('yaml', yaml)
   hljs.registerLanguage('markdown', markdown)
+  hljs.registerLanguage('python', python)
 	
   import 'highlight.js/styles/a11y-light.css'
 
