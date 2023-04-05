@@ -10,7 +10,7 @@ description: Best practices for handling different units in software systems.
 
 On September 23, 1999, communication was lost with the Mars Climate Orbiter probe, resulting in the loss of a project worth 327 million USD. An investigation revealed that the [cause of the crash was due to incorrect unit conversion](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter). 
 
-One system transmitted data in United States customary units, while the other system interpreted it as International System of Units
+One system transmitted data in USCS *(United States customary units)* while the other system interpreted it as SI *(International System of Units)*.
 
 Similar problems occur frequently in software development, although they usually don't result in billion-dollar losses.
 
@@ -19,7 +19,7 @@ Developers frequently encounter challenges when transferring data, as they need 
 
 Unfortunately, this process is prone to errors, and mistakes are all too common.
 
-To address this issue, a classic approach is to improve variable naming conventions, include helpful comments, and thoroughly document APIs.
+To address this issue, a classic approach is to improve variable naming conventions, add helpful comments, and make sure to well document the APIs.
 
 Although these solutions can be helpful, they are not infallible. Even experienced developers can miss important details and misunderstand differences between units, such as the distinction between miles and nautical miles.
 
@@ -28,13 +28,13 @@ Especially when working with external APIs, it can be difficult to ensure that c
 
 In this article, we'll explore the issue in-depth and present a solution to simplify the process of handling units in software systems.
 
-Handling units in software systems can be a tricky task. The challenges include:
+Handling units in software systems can be a tricky task. The challenges includes:
 
-- Identifying the correct unit system and documenting it clearly
-- Dealing with lengthy variable names that include unit information
-- Ensuring proper conversion across the system
+- Identifying the unit system in use
+- Very lengthy variables and methods names that includes unit information
+- Many conversions all across the system
 - Understanding how to convert between different units
-- Choosing a unit system for APIs.
+- Choosing a unit system for the system & APIs
 
 
 Let's take a look at some examples to illustrate these difficulties:
@@ -55,8 +55,7 @@ const timePassedFromLastUpdate = 500;
 const newPlatformPosition = getCurrentPosition(platformPosition, platformSpeed, timePassedFromLastUpdate);
 
 console.log(newPlatformPosition);
-// Is 'newPlatformPosition' value right?
-// Can you understand what is the units in 'getCurrentPosition' API?
+// Can you understand what is the unit system in 'getCurrentPosition' API? and what is the speed = 1 means?
 ```
 
 <br>
@@ -89,14 +88,15 @@ const timePassedInMilliseconds = 500;
 const newPlatformPositionInMeters = getCurrentPosition(platformPositionInMeters, speedInMeterPerHour, timePassedInMilliseconds);
 
 console.log(newPlatformPositionInMeters);
-// Now you can understand the API but the names? look too long and troubled.
+// Now you can understand the API, but the names? so long and not easy to read.
 ```
 
 <br>
 <br>
 <br>
 
-This example highlights the challenge of dealing with multiple unit conversions that cannot be avoided, but without a good reason.
+This example highlights the challenge of dealing with multiple unit conversions that cannot be avoided, 
+but without a good reason to do so from the first place.
 
 ```typescript
 function nextPositionFormula(positionInMeters: number, 
@@ -125,14 +125,14 @@ const newPlatformPositionInMeters = getCurrentPosition(platformPositionInMeters,
 
 console.log(newPlatformPositionInMeters);
 // Did you notice that the 'speedInMeterPerMinutes' converted to 'PerHour' 
-// just to convert back to 'PerMinutes' for the formula API?.
+// just to convert back to 'PerMinutes' for the formula API?
 ```
 
 <br>
 <br>
 <br>
 
-Well, who would want to convert from decimeters to nautical miles?
+Well, who would want to know how to convert from decimeters to nautical miles?
 
 ```typescript
 function nextPositionFormula(positionInMeters: number, 
@@ -203,7 +203,7 @@ const newPlatformPositionInYards = getCurrentPosition(positionInYards,
 const newPlatformPositionInMeters = newPlatformPositionInYards * 0.9144;
 
 console.log(newPlatformPositionInMeters);
-// Here we use the meters units so why the 'getCurrentPosition' force to convert to yards units? 
+// Here we use the meters system, so why the 'getCurrentPosition' force to convert to yards units? 
 ```
 <br>
 <br>
@@ -215,9 +215,11 @@ console.log(newPlatformPositionInMeters);
 The [UnitsNET](https://github.com/angularsen/UnitsNet) library - the ultimate solution to unit conversion woes.
 
 
-The awesome UnitsNet library provides a structure for units that's independent of the system. For example, it offers a `Length` object that has properties for all unit variants such as meters, yards, and more.
+The awesome UnitsNet library provides a structure for units that's independent of the system. For instance, it offers a `Length` object that has properties for all unit variants such as meters, yards, and more.
 
-Instead of using different variable names across the system, only the `Length` object is used, making it easier to manage conversions. If a specific unit system is required, such as when sending data to another system using an API, it's simple to obtain the correct value in the required unit system, and make it easy to understand what is the system used for sending.
+Instead of using different variable names across the system, only the `Length` object is used, making it easier to manage conversions when it does required. 
+
+When a specific unit system is required, such as when sending data to another system using an API, it's simple to obtain the correct value in the required unit system, and make it easy to understand later what is the system used for sending.
 
 
 Let's take a look at some code examples:
