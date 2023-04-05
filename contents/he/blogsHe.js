@@ -1,4 +1,5 @@
 export default [
+  'units-in-system',
 	'js-best-practices-config-ci-part-d',
   'js-best-practices-config-unit-tests-part-c',
   'js-best-practices-config-linter-part-b',
@@ -6,7 +7,6 @@ export default [
   'private-vpn-on-aws',
   'photoprism-on-rsp',
   'google-photos-alternative',
-  'units-in-system',
   'mulit-platform-cpp',
   'flashing-tasmota-on-sonoff-rf-bridge',
   'environments-variables-and-frontend',

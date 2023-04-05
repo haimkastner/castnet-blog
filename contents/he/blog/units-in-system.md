@@ -1,14 +1,12 @@
 ---
 name: 'units-in-system'
 title: יחידות מידה ומערכות תכנה
-year: 24 בדצמבר 2019
+year: 4 באפריל 2023
 color: '#8e7964'
 id: 'units-in-system'
 trans: 'units-in-system'
 description: צורת עבודה נכונה עם יחידות מידה במערכות תכנה
 ---
-
-> עודכן ב-4/4/2023
 
 ב-23 בספטמבר 1999 ניתק הקשר עם הגשושית 
 Mars Climate Orbiter.
