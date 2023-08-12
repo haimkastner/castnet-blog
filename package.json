@@ -1,7 +1,7 @@
 {
 	"name": "castnet-blog",
 	"version": "1.0.0",
-	"author": "Haim Kastner <haim.kastner@gmail.com>",
+	"author": "Haim Kastner <hello@haim-kastner.com>",
 	"private": true,
 	"engines": {
 		"node": ">=8.0.0",

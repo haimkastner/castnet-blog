@@ -114,7 +114,7 @@ module.exports = {
           // generator: "awesome", // optional, default = 'Feed for Node.js'
           author: {
             name: "Haim Kastner",
-            email: "haim.kastner@gmail.com",
+            email: "hello@haim-kastner.com",
             link: "https://twitter.com/hkastnet"
           }
         }
@@ -160,7 +160,7 @@ module.exports = {
           // generator: "awesome", // optional, default = 'Feed for Node.js'
           author: {
             name: "Haim Kastner",
-            email: "haim.kastner@gmail.com",
+            email: "hello@haim-kastner.com",
             link: "https://twitter.com/hkastnet"
           }
         }
