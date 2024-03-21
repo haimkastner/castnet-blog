@@ -17,6 +17,8 @@ description: Build API server fast and get API spec, documentation and consumer 
 >
 > [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
 >
+> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK (_COMMING SOON_)
+>
 ----
 
 <br>
@@ -429,6 +431,5 @@ Spec also published on [swaggerhub](https://app.swaggerhub.com/apis/haimkastner/
 
 > The [next article](/en/blog/perfect-api-server-part-b) wil be of how to setting up front facade using the API Server generated spec.
 
-----
+> The [SDK article](/en/blog/perfect-api-server-part-d-sdk) wil be of how to generate and publish SDK based on the generated OpenApi specification.
 
-Photo by <a href="https://burst.shopify.com/@farah?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wooden+Craft+Table+Set+Up+For+Watercolors&amp;utm_medium=referral&amp;utm_source=credit">Farah</a> from <a href="https://burst.shopify.com/craft-diy?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wooden+Craft+Table+Set+Up+For+Watercolors&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

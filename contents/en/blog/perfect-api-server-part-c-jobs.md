@@ -17,6 +17,8 @@ description: The right & easy way for asynchronous request processing via Rest A
 >
 > <ins>[Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API <ins>
 >
+> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK (_COMMING SOON_)
+>
 ----
 
 <br>
@@ -600,7 +602,3 @@ For more information and to explorer the source-code as well as the live example
 - A specification with the jobs API is available on [SwaggerHub](https://app.swaggerhub.com/apis/haimkastner/node-api-spec-boilerplate)
 - The backend implementation is available at [node-api-spec-boilerplate](https://github.com/haimkastner/node-api-spec-boilerplate) GitHub Repository.
 - The frontend implementation is available at [react-typescript-spec-facade](https://github.com/haimkastner/react-typescript-spec-facade) GitHub Repository.
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=High+Res+Colorful+Toy+Gears+Picture+%E2%80%94+Free+Images&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/api-kids-babies?utm_campaign=photo_credit&amp;utm_content=High+Res+Colorful+Toy+Gears+Picture+%E2%80%94+Free+Images&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

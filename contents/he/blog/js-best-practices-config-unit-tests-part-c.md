@@ -192,7 +192,3 @@ npm i --save-dev mocha-lcov-reporter nyc
 >
 > [במאמר הבא](/blog/js-best-practices-config-ci-part-d)
 נראה איך לארגן אינטגרציה מלאה של כל הטוב שסידרנו עד עכשיו, יחד לכדי מכונה משומנת ואוטומטית 🥊.
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wide+Shot+Of+Compass+And+Waterfalls&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/ocean?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wide+Shot+Of+Compass+And+Waterfalls&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

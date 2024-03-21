@@ -17,6 +17,8 @@ description: Build API server fast and get API spec, documentation and consumer 
 >
 > [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
 >
+> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK (_COMMING SOON_)
+>
 ----
 
 <br>
@@ -631,7 +633,3 @@ This repo integrated to Netlify services on [react-typescript-spec-facade.castne
 
 Hope you enjoyed the article, and have fun with the OpenAPI echo system.
 
-
-----
-
-Photo by <a href="https://burst.shopify.com/@aelis?utm_campaign=photo_credit&amp;utm_content=Free+Eyeshadow+Explosion+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit">Aelis Harris</a> from <a href="https://burst.shopify.com/beauty?utm_campaign=photo_credit&amp;utm_content=Free+Eyeshadow+Explosion+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

@@ -170,7 +170,3 @@ As you can see, we are on the 100% coverage 🥇🥇🥇
 > What else can we do with this report?
 >
 > In the [next article](/en/blog/js-best-practices-config-ci-part-d) will see how to build a full CI using all the tools we already integrated into the project and more.
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wide+Shot+Of+Compass+And+Waterfalls&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/ocean?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Wide+Shot+Of+Compass+And+Waterfalls&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

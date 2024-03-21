@@ -309,7 +309,3 @@ print(new_platform.meters)
 ```
 
 Enjoy!
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Picture+of+Race+Track+Numbers+%E2%80%94+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/background?utm_campaign=photo_credit&amp;utm_content=Picture+of+Race+Track+Numbers+%E2%80%94+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

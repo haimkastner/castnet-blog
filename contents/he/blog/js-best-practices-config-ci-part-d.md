@@ -260,7 +260,3 @@ The articles about it is available in [blog.castnet](https://blog.castnet.club/b
  כדאי מאוד להעמיק עוד יותר בכל הכלים ולהוציא מהם את המקסימום
 אבל בשביל הבסיס של הבסיס נראה לי זה מספיק, 
 תודה רבה שהייתים איתי עד כאן, היה מתיש אבל היי, שווה את ההשקעה 😎
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Free+Shipping+Boxes+In+Front+Of+Red+Brick+Photo+%E2%80%94+High+Res+Pictures&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/shipping?utm_campaign=photo_credit&amp;utm_content=Free+Shipping+Boxes+In+Front+Of+Red+Brick+Photo+%E2%80%94+High+Res+Pictures&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

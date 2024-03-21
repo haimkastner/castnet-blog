@@ -121,7 +121,3 @@ export function addNumbers(a: number, b: number): number {
 מעולה! יש לנו עכשיו פרוייקט TypeScript מוגדר ומוכן לשימוש.
 
 > [במאמר הבא](/blog/js-best-practices-config-linter-part-b) נלמד איך להוסיף לינטר לפרוייקט כך שנמנע מעצמנו בעיות כמו למשל לקרוא למשתנה לפני שהוא הוגדר 😲
-
-----
-
-Photo by <a href="https://burst.shopify.com/@sarahpflugphoto?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Neatly+Set+Desk+For+Startup+Or+School&amp;utm_medium=referral&amp;utm_source=credit">Sarah Pflug</a> from <a href="https://burst.shopify.com/team?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Neatly+Set+Desk+For+Startup+Or+School&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

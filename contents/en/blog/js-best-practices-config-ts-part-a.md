@@ -110,7 +110,3 @@ Great!, seems that we have a TypeScript project ready to use!
 
 
 > In the [next article](/en/blog/js-best-practices-config-linter-part-b) we will see how to add and defined a Linter to this project.
-
-----
-
-Photo by <a href="https://burst.shopify.com/@sarahpflugphoto?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Neatly+Set+Desk+For+Startup+Or+School&amp;utm_medium=referral&amp;utm_source=credit">Sarah Pflug</a> from <a href="https://burst.shopify.com/team?utm_campaign=photo_credit&amp;utm_content=Browse+Free+HD+Images+of+Neatly+Set+Desk+For+Startup+Or+School&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

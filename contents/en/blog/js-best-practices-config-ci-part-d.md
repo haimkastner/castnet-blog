@@ -206,6 +206,3 @@ It's recommended to dig deeper into those tool options, but for the basic of the
 
 Hope you enjoy the article 😎
 
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Free+Shipping+Boxes+In+Front+Of+Red+Brick+Photo+%E2%80%94+High+Res+Pictures&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/shipping?utm_campaign=photo_credit&amp;utm_content=Free+Shipping+Boxes+In+Front+Of+Red+Brick+Photo+%E2%80%94+High+Res+Pictures&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>

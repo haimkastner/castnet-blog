@@ -223,7 +223,3 @@ After all those changes the configuration files should look like this
 From now and on, our code structure and format always will be correct as we defined  💪 💪 💪
 
 > In the [next article](/en/blog/js-best-practices-config-unit-tests-part-c) we will see how to set Unit-Tests
-
-----
-
-Photo by <a href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Picture+of+Organized+Pencil+Holder+%E2%80%94+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Matthew Henry</a> from <a href="https://burst.shopify.com/design?utm_campaign=photo_credit&amp;utm_content=Picture+of+Organized+Pencil+Holder+%E2%80%94+Free+Stock+Photo&amp;utm_medium=referral&amp;utm_source=credit">Burst</a>
