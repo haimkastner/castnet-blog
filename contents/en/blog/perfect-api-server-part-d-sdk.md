@@ -5,7 +5,7 @@ year: 20 March 2024
 color: '#8e7964'
 # trans: 'perfect-api-server-part-d-sdk'
 id: 'perfect-api-server-part-d-sdk'
-description: Build API server fast and get API spec, documentation and consumer facade for free - Part II - Setting Up SDK
+description: Build API server fast and get API spec, documentation and consumer facade for free - Part IV - SDK Setup
 ---
 
 ----
@@ -17,7 +17,7 @@ description: Build API server fast and get API spec, documentation and consumer 
 >
 > [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
 >
-> <ins>[Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK <ins>
+> <ins>[Part IV](/en/blog/perfect-api-server-part-d-sdk) – SDK Setup <ins>
 >
 
 ----
@@ -25,52 +25,56 @@ description: Build API server fast and get API spec, documentation and consumer 
 <br>
 <br>
 
-Bla bla bla about SDK....
-
-A complete example of the SDK can be found at https://github.com/haimkastner/open-api-based-sdk-boilerplate 
-## Set Up TypeScript Project
-
-Create an empty folder and open the command-line/terminal in the new created folder directory.
-
-Run npm init to create an empty JS project.
-
-Run tsc --init to create an empty TS project, and run yarn add -D typescript to add TS to the project.
-
-Install the following dependencies:
-    yarn add node-fetch
-    yarn add -D fs-extra @types/node
-    yarn add -D dotenv for loading environment variables from an .env file
-
-And now let's prepare the SDK.
-
-Open the folder directory in your favorite IDE, such as VS Code
+We have an API server, and we want to provide an SDK for it instead of letting customers do their research on the specifications, build boilerplate code, handle authentication, sessions, etc.
 
 
-## Fetch OpenAPI Spec
+We aim to provide them with an easy-to-use SDK, complete with all interface validations, and more. However, we don’t want to duplicate code ourselves. We just want to build the infrastructure and generate the operations. So, how can this be done? In this article, we will demonstrate how it can be accomplished easily.
 
 
-First, need to obtain the OpenAPI spec, usually, it will be the latest generated spec.
-
-There are several options for how to fetch spec, depending on the needs and the CI/CD infrastructure, I will suggest 2 ways:
-
-- `Fetch from Swagger Hub` - once a spec is published to SwaggerHub there is an easy-to-use API to fetch it, but this way will limit the fetch process to only the latest published spec.
 
 
-- `Fetch from GitHub Actions Artifact` - once a commit is pushed to GitHub a new actions job to upload spec to GitHab's artifactory triggered, and a few seconds later available to be fetched by branch, but this option is a bit more complicated and required more maintenance.
 
-Both are explained on the front facard Fetch OpenAPI Spec section, here, we will go with the simple SwaggerHub way.
+## Set Up Project
 
-Within the `scripts` folder create a file named `package.json` and fill it with this content:
+Create an empty folder and open the command-line or terminal in the newly created folder directory.
+
+Run `npm init` to create an empty JavaScript project.
+
+Run `tsc --init` to create an empty TypeScript project, and run 
+
+Add the following dependencies:
+`yarn add -D typescript node-fetch fs-extra @types/node dotenv`
+
+Now, let’s prepare the SDK. 
+
+Open the folder directory in your favorite IDE, such as Visual Studio Code.
+
+
+## Fetch OpenAPI Specification
+
+First, you need to obtain the OpenAPI spec, which is usually the latest generated spec.
+
+There are several options for fetching the spec, depending on your needs and the CI/CD infrastructure. I suggest two ways:
+
+- `Fetch from SwaggerHub` - Once a spec is published to SwaggerHub, there is an easy-to-use API to fetch it. However, this method will limit the fetch process to only the latest published spec.
+
+- `Fetch from GitHub Actions Artifact` - Once a commit is pushed to GitHub, a new actions job to upload the spec to GitHub’s artifact is triggered, and a few seconds later it’s available to be fetched by branch. This option is a bit more complicated and requires more maintenance.
+
+Both methods are explained in the [Setting Up Front Facade](/en/blog/perfect-api-server-part-b) -> “Fetch OpenAPI Spec” section. Here, we will go with the simpler SwaggerHub method.
+
+Within the scripts folder, create a file named `package.json` and fill it with this content:
 ```json
 {
     "type": "module"
 }
 ```
-This configuration is required in order to use the `import ... from "..."` syntax in JS scripts on this directory.
+> This configuration is necessary in order to use the `import ... from "..."` syntax in JavaScript scripts within this directory.
 
 Create a new file `fetch-spec.js` in this file needs to be the JS script code that fetches spec and places it at the `src/generated` directory.
 
-Let's start with SwaggerHub's example, copy & paste the following code, just replace the `API_SPEC_OWNER` owner name and the `API_SPEC_NAME` name with your own values, feel free to read the comments to understand the simple flow 🤥
+Next, create a new file named `fetch-spec.js`. This file should contain the JavaScript script code that fetches the spec and places it in the `src/generated` directory.
+
+Let’s start with an example using SwaggerHub. Copy and paste the following code, replacing the `API_SPEC_OWNER` owner name and the `API_SPEC_NAME` name with your own values. Feel free to read the comments to understand the flow.
 
 ```typescript
 import fse from 'fs-extra';
@@ -147,37 +151,38 @@ async function downloadSpec() {
 })();
 ```
 
+Once the fetch script is ready, you need to modify the `package.json` file located at the *project’s root*. Add the following script to the scripts section:
 
-Once the fetch script is ready, go the the `package.json` file on the *project's root* and add the following script to the scripts section:
-
-```
+```json
 "fetch-spec": "node ./scripts/fetch-spec.js",
 ```
 
-Then run `yarn fetch-spec` once a spec file named `swagger.json` should appear on the `src/generated` directory.
+once you’ve added the script to your `package.json` file, you can run `yarn fetch-spec` from the command line. This should generate a spec file named `swagger.json` in the `src/generated` directory. This means your script is working correctly and you’ve successfully fetched the spec.
 
-Here as well, if don't yet exist a `.gitignore` file, don't forget to create it on the project's root, with the following file & directories to exclude:
+If a `.gitignore` file doesn’t already exist in your project’s root directory, it’s important to create one. This file is used to tell Git which files or directories to ignore in a project.
 ```
-
 generated/
 .env
 node_modules/
 dist/
 ```
 
-## Generate SDK
+## Generate the SDK
 
-And... to the main part, the API SDK to generate.
+let’s move on to the main part: generating the API SDK. This is where we’ll use the OpenAPI spec that we fetched earlier to generate an SDK that will make it easier for your customers to interact with your API.
 
-Copy the api template from Swagger repo resources
-[https://github.com/swagger-api/swagger-codegen/blob/master/modules/swagger-codegen/src/main/resources/typescript-fetch/api.mustache](https://github.com/swagger-api/swagger-codegen/blob/master/modules/swagger-codegen/src/main/resources/typescript-fetch/api.mustache)
-Create and paste it on the `resources/openapi/templates/typescript-axios/api.mustache` file in the project.
+Copy the API template from the Swagger repository resources. You can find it at this [link](https://github.com/swagger-api/swagger-codegen/blob/master/modules/swagger-codegen/src/main/resources/typescript-fetch/api.mustache).
 
-Add the OpenAPI generator tool by running `yarn add -D @openapitools/openapi-generator-cli`.
+Create a new file in your project at `resources/openapi/templates/typescript-axios/api.mustache` and paste the copied content into this file.
 
-> OpenAPI generator tool requires [JVM](https://www.java.com/en/download/) to be installed on the machine
+Add the OpenAPI generator tool to your project. You can do this by running the following command in your terminal:
+```
+yarn add -D @openapitools/openapi-generator-cli
+```
 
-Create a new file `openapitools.json` with the OpenAPI generator configuration in it:
+This command adds the OpenAPI generator CLI as a devDependency to your project. 
+
+Create a new file at the project root, named `openapitools.json` with the OpenAPI generator configuration in it:
 ```json
 {
 	"$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
@@ -200,16 +205,24 @@ Create a new file `openapitools.json` with the OpenAPI generator configuration i
 }
 ```  
 
-In the `package.json` file add the following scripts to the scripts section:
-```
+Now, you’re all set to generate your API SDK!
 
+In the `package.json` file add the following scripts to the scripts section:
+```json
+
+...
 "generate-api": "openapi-generator-cli generate",
 "prebuild": "npm run fetch-spec && npm run generate-api",
+...
 ```
 
-Run `yarn prebuild` and a new folder with the generated files should be on the `src/generated` directory, open the `src/generated/api.ts` this file contained the generated API as well as the spec interfaces.
+Run `yarn prebuild` from the command line. This should create a new folder with the generated files in the `src/generated` directory.
 
-Within this file, a few TS errors will probably appear, so let's modify a bit this template file to fix them and to make some changes to abject the API for the project needs.
+Open the `src/generated/api.ts` file, This file contains the generated API as well as the spec interfaces.
+
+You might notice a few TypeScript errors within this file. Don’t worry, these can be fixed by modifying the template file.
+
+Let’s go ahead and make some changes to adapt the API for the project’s needs.
 
 Line 1 - Comment out the non-required ref.
 ```
@@ -218,25 +231,28 @@ Line 1 - Comment out the non-required ref.
 {{! /// <reference path="./custom.d.ts" /> }}
 ```
 
-Line 7 - Comment out `portable-fetch` import, instead import node-fetch by `yarn add node-fetch` and import it and use it for the `portableFetch`.
+Line 7 - Comment out `portable-fetch` import, instead use the `cross-fetch` library.
+
+Run `yarn add cross-fetch` to import it, and use it for the `portableFetch`.
 ```
-{{! TEMPLATE EDIT: use node-fetch fetch as API caller  }}
+
+{{! TEMPLATE EDIT: use cross-fetch as API caller  }}
 {{! import * as portableFetch from "portable-fetch"; }}
 import fetch from "node-fetch";
 import { Configuration } from "./configuration";
 const portableFetch = fetch as any;
 ```
 
-Line 13 - Take as default the URL from the specification, and allow pass API Server URL by `API_SERVER_URL` environment variable.
+Line 13 - As default, take the URL from the specification, and allow passing dedicated API Server URL by `API_SERVER_URL` environment variable.
 ```
 
 {{! TEMPLATE EDIT: config API Server URL   }}
 const BASE_PATH = process.env.API_SERVER_URL || "{{{basePath}}}".replace(/\/+$/, "");
 ```
 
-End-of-the-file - Implement the SDK API class. instead of creating a new class instead each API call or call to the ugly `StatusApiFp` functional API, add global `ServerSDK` with public members with ready-to-use API topics, and the API call will be something like `ServerSDK.StatusApi.ping()`.
+let’s implement the SDK API class. so instead of creating a new class for each API call or using the StatusApiFp functional API, we’ll add a global ServerSDK with public members that have ready-to-use API topics. This way, an API call will look something like `ServerSDK.StatusApi.ping()`.
 
-This is the place to add/inject session managment, logging, and every think that needed in a real-world SDK.
+This is also the place where you can add or inject session management, logging, and anything else that’s needed in a real-world SDK.
 ```
 
 {{! TEMPLATE EDIT: Generate easy to use API Facade, with ready to use instances of each generated API class }}
@@ -251,18 +267,16 @@ export class ServerSDK {
 
 See [api.mustache](https://github.com/haimkastner//open-api-based-sdk-boilerplate/blob/main/resources/openapi/templates/typescript-axios/api.mustache) for the full modified template file.
 
-Since the generated template uses the `url` library, add it to the project dependencies by `yarn add url`.
+The `url` library is used in the generated template. You can add it to your project dependencies by running `yarn add url` command in your terminal.
 
-Run `yarn prebuild` again, and now all errors should be gone from the `api.ts` generated file, and all is finally ready for the next step.
+Run `yarn prebuild` again from the command line. This should resolve all errors in the api.ts generated file, and your project is now ready for the next step.
 
-Now let's export the SDK instande to the SDK consumers.
-
-Add new `index.ts` in `src` directory with the following content:
+Now, let’s export the SDK instance to the SDK consumers. Add a new file named `index.ts` in the `src` directory with the following content:
 ```typescript
 export * from './generated/swagger/api';
 ```
 
-And add to the `package.json` the entry point file and the dist files (to be added later as part of the package)
+Next, update the `package.json` file to include the entry point file and the dist files (which will be added later as part of the package). Here’s how you can do this:
 ```json
 ...
  "main": "dist/index.js",
@@ -270,21 +284,15 @@ And add to the `package.json` the entry point file and the dist files (to be add
 ...
 ```
 
-## Building SDK 
+## Building The SDK 
 
-
-
-Let's add the testing tools by `yarn add -D chai mocha @types/chai @types/mocha ts-node`
-
-
-Add a build command to the `package.json` in the scripts section:
+Add a build command to the `package.json` file in the scripts section:
 ```json
 ...
     "build": "tsc"
 ...
 ```
-
-Config `tsconfig.json` with the `compilerOptions` properties:
+Configure the `tsconfig.json` file with the following `compilerOptions` properties:
 ```json
 ...
   "rootDir": "./src",
@@ -295,19 +303,20 @@ Config `tsconfig.json` with the `compilerOptions` properties:
 
 And run `yarn build`.
 
-The SDK is ready 😎 
+Congratulations, your SDK is now ready! 😎
 
-## Testing SDK
+## Testing The SDK
 
-Let's add the testing tools by `yarn add -D chai mocha @types/chai @types/mocha ts-node`
+Let's add the testing tools by `yarn add -D chai mocha @types/chai @types/mocha ts-node` commadn.
 
 Add a test command to the `package.json` in the scripts section:
-
+```json
 ...
   "test": "mocha -r ts-node/register tests/**/*.spec.ts"
 ...
+```
 
-Create new directory `tests` and within it create new test file named `sdk.spec.ts` containes one simple test:
+Create new directory `tests` and within it create a new test file named `sdk.spec.ts` containes one simple test:
 ```typescript
 import { describe } from 'mocha';
 import { expect } from 'chai';
@@ -330,9 +339,30 @@ And run `yarn test`.
 
 It is can be done simnply by loginig to npm with `npm login` and running `yarn publish`.
 
-But here we will demonstrate how to build GitHub Action to generate & publish the package on each server new API.
+However, this right way is to publish it as part of the piplies.
 
-Create new file at `.github/workflows/release.yml` with that content:
+Here are the steps to deploy your SDK to NPM using GitHub Actions:
+
+#### Create a new NPM token for publishing
+Generate a new NPM token. This can be done on the NPM website under `Auth Tokens` in your account settings.
+
+#### Add the NPM token to your GitHub repository secrets
+- Go to your GitHub repository settings.
+- Click on `Secrets` in the left sidebar.
+- Click on `New repository secret`.
+- Enter `NPM_TOKEN` as the name and paste your NPM token as the value.
+
+
+#### Enable “Read and write permissions” in your repository settings
+
+To increase package version during release, a write permission need to grant to the actions token.
+- Go to your GitHub repository settings.
+- Click on `Actions` in the left sidebar.
+- Under `General`, find `Workflow permissions` and set it to `Read and write permissions`.
+
+#### Create a new GitHub Actions workflow:
+- Create a new file at `.github/workflows/release.yml`.
+- Paste the provided YAML content into this file. This content defines your build and release jobs.
 ```yml
 name: open-api-based-sdk-boilerplate
 
@@ -422,20 +452,33 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: Update gen docs for version ${{ steps.update_version.outputs.VERSION }} [skip-ci]
-
 ```
 
+#### Push your code to GitHub
+- Run git push in your terminal to push your code to GitHub.
+- Once your code is pushed, the GitHub Actions workflow will automatically run and do the rest.
 
-Generate a new NPM token for the publish and add it to the Repository secrete with the name `NPM_TOKEN`.
-
-Enabled "Read and write permissions" in Repository Settings -> Actions -> General -> Workflow permissions.
-
-Push the code to GitHub and... the actions will do the rest.
+Your SDK should now be automatically built and published to NPM whenever you push to your main branch. Congratulations!
 
 
-Now, let's create a token with premissions to run workflow. and add it to the server repository seretes with the name `SDK_EXAMPLE_WORKFLOW_TOKEN`
+Finally, let’s create a token with permissions to run the workflow.
 
-In the server's GitHub actions add this to the release action. 
+Go to your GitHub account settings.
+- Click on `Developer settings`.
+- Click on `Personal access tokens`.
+- Click on Generate new token.
+- Give your token a descriptive name.
+- Under Select scopes, check the boxes that correspond to the permissions you need. For a public repository and workflow, you might need repo (which - includes all repository permissions) and workflow (which allows you to run workflows).
+- Click on Generate token at the bottom of the page.
+
+Your new personal access token will appear.
+
+- Go to the server's GitHub repository settings.
+- Click on `Secrets` in the left sidebar.
+- Click on `New repository secret`.
+- Enter `SDK_EXAMPLE_WORKFLOW_TOKEN` as the name and paste your newly created token as the value.
+
+In the server's actions add this to the release action. 
 ```yml
 - name: Call re-run generate & publish SDK example # Trigger SDK package re-generate and publish
   env:
@@ -449,9 +492,11 @@ In the server's GitHub actions add this to the release action.
     --data-raw '{"ref": "main" }'
 ```
 
+Now, your SDK will be automatically re-generated and published whenever a new release is created in your server repository.
+
 ## Consuming the SDK
 
-Once the package published, install it on your project:
+Once the package is published, install it on any project:
 ```bash
 yarn add @haimkastner/open-api-based-sdk-boilerplate
 ``` 
@@ -469,11 +514,14 @@ const res = await serverSDK.StatusApi.ping('hello', { whois: 'me' });
 
 ## Conclusion
 
-This article is the very begining of that the SDK can do.
+This article is just the beginning of what the SDK can do.
 
-You can customize every aspect of the SDK, add loging, monitoring, session managment and more, 
-while benefiting it once to all API operations.
+You can customize every aspect of the SDK, add logging, monitoring, session management, and more, while benefiting from it across all API operations.
 
-Feel free to explorer the full example source-code [open-api-based-sdk-boilerplate](https://github.com/haimkastner/open-api-based-sdk-boilerplate).
+A complete example of the SDK can be found at the following GitHub repository [open-api-based-sdk-boilerplate](https://github.com/haimkastner/open-api-based-sdk-boilerplate)
 
-This exmplae SDK available at NPM on [@haimkastner/open-api-based-sdk-boilerplate](https://www.npmjs.com/package/@haimkastner/open-api-based-sdk-boilerplate)
+
+This SDK example is available on NPM at [@haimkastner/open-api-based-sdk-boilerplate](https://www.npmjs.com/package/@haimkastner/open-api-based-sdk-boilerplate)
+
+
+Thank you for reading this article. We hope you found it informative and helpful. Enjoy exploring the capabilities of the SDK and happy coding!

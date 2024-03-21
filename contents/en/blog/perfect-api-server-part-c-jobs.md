@@ -17,7 +17,7 @@ description: The right & easy way for asynchronous request processing via Rest A
 >
 > <ins>[Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API <ins>
 >
-> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK (_COMMING SOON_)
+> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – SDK Setup
 >
 ----
 

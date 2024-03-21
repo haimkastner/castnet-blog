@@ -17,7 +17,7 @@ description: Build API server fast and get API spec, documentation and consumer 
 >
 > [Part III](/en/blog/perfect-api-server-part-c-jobs) – Long processing via Rest API 
 >
-> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – Setting Up SDK (_COMMING SOON_)
+> [Part IV](/en/blog/perfect-api-server-part-d-sdk) – SDK Setup
 >
 ----
 
