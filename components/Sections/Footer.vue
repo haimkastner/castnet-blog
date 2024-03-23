@@ -9,16 +9,12 @@
           <br />
           <span>
             |
-            <a target="_blank" href="https://tooot.im/@haimkastner" class="ani">
-              <span>Mastodon</span>
+            <a target="_blank" href="https://www.linkedin.com/in/haim-kastner/" class="ani">
+              <span>Linkedin</span>
             </a>
             |
             <a target="_blank" href="https://github.com/haimkastner" class="ani">
               <span>GitHub</span>
-            </a>
-            |
-            <a target="_blank" href="https://twitter.com/hkastnet" class="ani">
-              <span>Twitter</span>
             </a>
             |
             <a

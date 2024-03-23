@@ -115,7 +115,7 @@ module.exports = {
           author: {
             name: "Haim Kastner",
             email: "hello@haim-kastner.com",
-            link: "https://twitter.com/hkastnet"
+            link: "https://www.linkedin.com/in/haim-kastner/"
           }
         }
 
@@ -161,7 +161,7 @@ module.exports = {
           author: {
             name: "Haim Kastner",
             email: "hello@haim-kastner.com",
-            link: "https://twitter.com/hkastnet"
+            link: "https://www.linkedin.com/in/haim-kastner/"
           }
         }
 
