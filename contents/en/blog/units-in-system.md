@@ -8,6 +8,8 @@ trans: 'units-in-system'
 description: Best practices for handling different units in software systems.
 ---
 
+> Update on January 30th, 2025
+
 On September 23, 1999, communication was lost with the Mars Climate Orbiter probe, resulting in the loss of a project worth 327 million USD. An investigation revealed that the [cause of the crash was due to incorrect unit conversion](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter). 
 
 One system transmitted data in USCS *(United States customary units)* while the other system interpreted it as SI *(International System of Units)*.
@@ -242,17 +244,20 @@ UnitsNet's developers have done a remarkable job by using JSON-formatted declara
 Because the developers of UnitsNet kept the definition files fully separate from the rest of the code, similar library can be generated for any ecosystem, not just the .Net ecosystem for which it was originally created.
 
 
-Since many developers, including myself, use JS/TS and Python as their primary development ecosystems, I took on the challenge of building a similar library for TypeScript and Python based on the unit definitions provided by UnitsNet.
+Since many developers, including myself, use JS/TS and Python as their primary development ecosystems, I took on the challenge of building a similar library for TypeScript, Python, and now Go (30/01/25) based on the unit definitions provided by UnitsNet.
 
 
 The [unitsnet-js](https://github.com/haimkastner/unitsnet-js) library available on NPM registry at [https://www.npmjs.com/package/unitsnet-js](https://www.npmjs.com/package/unitsnet-js)
 
 The [unitsnet-py](https://github.com/haimkastner/unitsnet-py) library available on PyPi registry at [https://pypi.org/project/unitsnet-py](https://pypi.org/project/unitsnet-py)
 
-Both uses the Units.Net [unit definitions](https://github.com/angularsen/UnitsNet/tree/master/Common/UnitDefinitions) to generate the library units systems.
+
+The [unitsnet-go](https://github.com/haimkastner/unitsnet-go) library available on Go's package registry at [https://pkg.go.dev/github.com/haimkastner/unitsnet-go](https://pkg.go.dev/github.com/haimkastner/unitsnet-go).
+
+All of these libraries use the Units.Net [unit definitions](https://github.com/angularsen/UnitsNet/tree/master/Common/UnitDefinitions) to generate the library units systems.
 
 
-Once using the new approach for units, see how clear and simple it become:
+Once using the new approach for units, see how clear and simple it becomes:
 
 In TypeScript:
 
@@ -306,6 +311,38 @@ time_passed = Duration.from_microseconds(500)
 new_platform = get_current_position(platform_position, platform_speed, time_passed)
 
 print(new_platform.meters)
+```
+
+And Go:
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/haimkastner/unitsnet-go/units"
+)
+
+func nextPositionFormula(position *units.Length, speed *units.Speed, timePassed *units.Duration) *units.Length {
+	lf := units.LengthFactory{}
+	next, _ := lf.FromMeters(position.Meters() + (speed.MetersPerSecond() * timePassed.Seconds()))
+	return next
+}
+
+func getCurrentPosition(position *units.Length, speed *units.Speed, timePassed *units.Duration) *units.Length {
+	return nextPositionFormula(position, speed, timePassed)
+}
+
+func main() {
+	lf := units.LengthFactory{}
+	sf := units.SpeedFactory{}
+	df := units.DurationFactory{}
+	platformPosition, _ := lf.FromMeters(100)
+	platformSpeed, _ := sf.FromMetersPerMinutes(1)
+	timePassed, _ := df.FromMicroseconds(500)
+	newPlatform := getCurrentPosition(platformPosition, platformSpeed, timePassed)
+
+	fmt.Println(newPlatform.Meters())
+}
 ```
 
 Enjoy!

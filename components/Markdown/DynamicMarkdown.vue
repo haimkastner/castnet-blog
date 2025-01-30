@@ -14,6 +14,7 @@
   import yaml from 'highlight.js/lib/languages/yaml'
   import markdown from 'highlight.js/lib/languages/markdown'
   import python from 'highlight.js/lib/languages/python'
+  import go from 'highlight.js/lib/languages/go'
 	
   hljs.registerLanguage('javascript', javascript)
   hljs.registerLanguage('js', javascript)
@@ -30,6 +31,7 @@
   hljs.registerLanguage('yaml', yaml)
   hljs.registerLanguage('markdown', markdown)
   hljs.registerLanguage('python', python)
+  hljs.registerLanguage('go', go)
 	
   import 'highlight.js/styles/a11y-light.css'
 
