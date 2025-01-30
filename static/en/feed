@@ -4,7 +4,7 @@
         <title>Coding and Development Thoughts Blog</title>
         <link>https://blog.castnet.club/en</link>
         <description>Coding and Development Thoughts Blog, The Content is on the responsibility of the mind reader</description>
-        <lastBuildDate>Sat, 28 Jan 2023 18:12:58 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Jan 2025 21:50:08 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <language>en</language>
@@ -13,13 +13,31 @@
             <url>https://blog.castnet.club/favicons/android-chrome-192x192.png</url>
             <link>https://blog.castnet.club/en</link>
         </image>
-        <copyright>All rights reserved 2024, Haim Kastner</copyright>
+        <copyright>All rights reserved 2025, Haim Kastner</copyright>
         <category>software development</category>
+        <item>
+            <title><![CDATA[ Gleece - Rest API Development in Go]]></title>
+            <link>https://blog.castnet.club/en/blog/gleece-project</link>
+            <guid>https://blog.castnet.club/en/blog/gleece-project</guid>
+            <description><![CDATA[ The all-in-one Go framework for building, documenting, validating and securing REST APIs through code-first development]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ Simplifying Unit Handling in Software Systems]]></title>
+            <link>https://blog.castnet.club/en/blog/units-in-system</link>
+            <guid>https://blog.castnet.club/en/blog/units-in-system</guid>
+            <description><![CDATA[ Best practices for handling different units in software systems.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ 'Perfect API Server - Generating SDK']]></title>
+            <link>https://blog.castnet.club/en/blog/perfect-api-server-part-d-sdk</link>
+            <guid>https://blog.castnet.club/en/blog/perfect-api-server-part-d-sdk</guid>
+            <description><![CDATA[ Build API server fast and get API spec, documentation and consumer facade for free - Part IV - SDK Setup]]></description>
+        </item>
         <item>
             <title><![CDATA[ 'Perfect API Server - Long processing via Rest API']]></title>
             <link>https://blog.castnet.club/en/blog/perfect-api-server-part-c-jobs</link>
             <guid>https://blog.castnet.club/en/blog/perfect-api-server-part-c-jobs</guid>
-            <description><![CDATA[ Build API server fast and get API spec, the right & easy way for asynchronous request processing via Rest API - Part III - Long processing via Rest API]]></description>
+            <description><![CDATA[ The right & easy way for asynchronous request processing via Rest API - Part III - Long processing via Rest API]]></description>
         </item>
         <item>
             <title><![CDATA[ 'Perfect API Server - Generating Consumer API Facade']]></title>

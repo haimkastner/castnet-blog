@@ -5,7 +5,7 @@ year: January 30th, 2025
 color: '#8e7964'
 id: 'gleece-project'
 # trans: 'units-in-system'
-description: Gleece: The all-in-one Go framework for building, documenting, validating and securing REST APIs through code-first development
+description: The all-in-one Go framework for building, documenting, validating and securing REST APIs through code-first development
 ---
 
 Gleece - REST API Development in GO
