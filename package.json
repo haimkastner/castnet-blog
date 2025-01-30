@@ -19,7 +19,7 @@
 	},
 	"scripts": {
 		"dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt",
-		"generate": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
+		"generate": "nuxt generate",
 		"analyze": "nuxt build --analyze"
 	},
 	"devDependencies": {
