@@ -8,8 +8,6 @@ id: 'gleece-project'
 description: The all-in-one Go framework for building, documenting, validating and securing REST APIs through code-first development
 ---
 
-Gleece - REST API Development in GO
-
 Following the recent articles about building and coding an I/S with [Services API](/en/blog/perfect-api-server-part-a), [Frontend](/en/blog/perfect-api-server-part-b), [SDK](/en/blog/perfect-api-server-part-d-sdk), etc.
 
 The key point demonstrated was the high importance of enabling developers to easily write their own controllers as functions, define annotations, and have the build and CI/CD processes generate the specification standards, routing, validations, APIs, and SDKs from the source code itself - maintaining a single source of truth.
@@ -29,7 +27,7 @@ Our design considers the following:
 - **Easy & fault-safe security mechanism** - allows default policies, aborts & fails builds for missing route security, and one, unified simple function to be called with HTTP object and security checks to do authorization check.
 - **Support for Go's standard validation with custom validation** - easily validate every aspect of the request, path, query, header, and struct content in API body
 - **Generate specifications from the code** - supports OpenAPI specification 3.0 & 3.1 with an interface to add future versions
-- **Effortless integration with common routes** - supports Gin & Echo routers for new and existing services, with easy ways to add support for other widely used router frameworks and allow customized router templates for any needed purpose
+- **Effortless integration with common routers** - Supports all popular Go router frameworks ([Gin](https://github.com/gin-gonic/gin), [Echo v4](https://github.com/labstack/echo), [Gorilla Mux](https://github.com/gorilla/mux), [Chi v5](https://github.com/go-chi/chi), and [Fiber v2](https://github.com/gofiber/fiber)) for both new and existing services. Easily extendable to support additional router frameworks through customizable router templates.
 - **Easy error handling behavior** - uses [RFC7807](https://datatracker.ietf.org/doc/html/rfc7807) by default while allowing custom errors
 - **Clean and clear route and HTTP properties declaration** - while allowing advanced usage with access to the HTTP context, set headers, status, etc.
 
