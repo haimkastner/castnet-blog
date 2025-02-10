@@ -27,7 +27,7 @@ Our design considers the following:
 - **Easy & fault-safe security mechanism** - allows default policies, aborts & fails builds for missing route security, and one, unified simple function to be called with HTTP object and security checks to do authorization check.
 - **Support for Go's standard validation with custom validation** - easily validate every aspect of the request, path, query, header, and struct content in API body
 - **Generate specifications from the code** - supports OpenAPI specification 3.0 & 3.1 with an interface to add future versions
-- **Effortless integration with common routers** - Supports all popular Go router frameworks ([Gin](https://github.com/gin-gonic/gin), [Echo v4](https://github.com/labstack/echo), [Gorilla Mux](https://github.com/gorilla/mux), [Chi v5](https://github.com/go-chi/chi), and [Fiber v2](https://github.com/gofiber/fiber)) for both new and existing services. Easily extendable to support additional router frameworks through customizable router templates.
+- **Effortless integration with common routers** - Supports all popular Go routers ([Gin](https://github.com/gin-gonic/gin), [Echo v4](https://github.com/labstack/echo), [Gorilla Mux](https://github.com/gorilla/mux), [Chi v5](https://github.com/go-chi/chi), and [Fiber v2](https://github.com/gofiber/fiber)) for both new and existing services. Easily extendable to support additional router frameworks through customizable router templates.
 - **Easy error handling behavior** - uses [RFC7807](https://datatracker.ietf.org/doc/html/rfc7807) by default while allowing custom errors
 - **Clean and clear route and HTTP properties declaration** - while allowing advanced usage with access to the HTTP context, set headers, status, etc.
 
