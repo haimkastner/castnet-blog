@@ -5,7 +5,7 @@ year: January 30th, 2025
 color: '#8e7964'
 id: 'gleece-project'
 # trans: 'units-in-system'
-description: The all-in-one Go framework for building, documenting, validating and securing REST APIs through code-first development
+description: The all-in-one Go tool for building, documenting, validating and securing REST APIs through code-first development
 ---
 
 Following the recent articles about building and coding an I/S with [Services API](/en/blog/perfect-api-server-part-a), [Frontend](/en/blog/perfect-api-server-part-b), [SDK](/en/blog/perfect-api-server-part-d-sdk), etc.
@@ -18,7 +18,9 @@ The most amazing aspect of `TSOA`, from my point of view, is that unlike other f
 
 Recently, we started working with Go, an amazing and well-designed programming language (unlike JS... XD), and we wanted to integrate it with our I/S and CI/CD processes.
 
-However, despite there being great tools and frameworks to generate OpenAPI specs from code, validate payloads, and manage security, there was no tool that combined ALL these features together in a consolidated solution like `TSOA` offers for TypeScript.
+Coming from the TypeScript ecosystem, we were inspired by frameworks like `TSOA` that handle everything from routing and validation to OpenAPI generation - all from a single source of truth: your code.
+
+And while these core features are amazing, `TSOA`'s true power lies in its flexibility - allowing easy customization for any real-world use-case while allowing bypassing the tool back to the native router when necessary.
 
 Therefore, we decided to implement such a solution to provide the Golang community with the same powerful API development capabilities we had in the TypeScript ecosystem.
 
@@ -30,6 +32,9 @@ Our design considers the following:
 - **Effortless integration with common routers** - Supports all popular Go routers ([Gin](https://github.com/gin-gonic/gin), [Echo v4](https://github.com/labstack/echo), [Gorilla Mux](https://github.com/gorilla/mux), [Chi v5](https://github.com/go-chi/chi), and [Fiber v2](https://github.com/gofiber/fiber)) for both new and existing services. Easily extendable to support additional router frameworks through customizable router templates.
 - **Easy error handling behavior** - uses [RFC7807](https://datatracker.ietf.org/doc/html/rfc7807) by default while allowing custom errors
 - **Clean and clear route and HTTP properties declaration** - while allowing advanced usage with access to the HTTP context, set headers, status, etc.
+- **Built for customization** - Designed to be highly customizable, supporting real-world specific service needs (e.g. integrating telemetry into generated routes with API-declared objects)
+- **Extend, don't replace** - While providing powerful features, we ensure developers maintain access to the underlying context and can easily bypass the framework when needed
+
 
 We incorporated all these requirements into the `Gleece` project.
 
@@ -56,7 +61,7 @@ That's all.
 
 Sounds good?
 
-Go ahead and check out the [Gleece Repository](https://github.com/gopher-fleece/gleece) our [Step By Step](https://github.com/gopher-fleece/gleece/blob/main/docs/STEPBYSTEP.md) documentation and our complete [Gleece Service Example](https://github.com/gopher-fleece/gleecexample)
+Go ahead and check out the [Gleece Repository](https://github.com/gopher-fleece/gleece) Gleece documentation [docs.gleece.dev](https://docs.gleece.dev/) and the complete [Gleece Service Example](https://github.com/gopher-fleece/gleecexample)
 
 > 💡 Pro Tip: Install our [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=haim-kastner.gleece-extension) for a full coding viability support!
 
