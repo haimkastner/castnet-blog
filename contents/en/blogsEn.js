@@ -1,4 +1,5 @@
 export default [
+  'units-in-api',
   'gleece-project',
   'units-in-system',
   'perfect-api-server-part-d-sdk',
