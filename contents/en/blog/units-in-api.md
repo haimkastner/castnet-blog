@@ -4,7 +4,6 @@ title: API, Units, and Quantities
 year: March 30th, 2025
 color: '#8e7964'
 id: 'units-in-api'
-trans: 'units-in-api'
 description: "API, Units, and Quantities: Building Unit-Agnostic Integrations."
 ---
 
